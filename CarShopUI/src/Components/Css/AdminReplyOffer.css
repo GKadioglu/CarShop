@@ -1,0 +1,199 @@
+/* CSS */
+.admin-reply-offer-panel {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center; /* Yatayda ortalama */
+  align-items: stretch; /* Tüm çocuk öğeleri aynı yükseklikte olacak */
+}
+
+  .admin-reply-offer-list-title {
+    text-align: center;
+    font-size: 2.1rem;
+    width: 100%; /* Başlığın tüm genişlikte olması */
+  }
+  .admin-reply-offer-list {
+    width: 30%;
+    margin-top: 20px;
+    border-right: 1px solid #ccc;
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+    max-height: 50vh; /* Yüksekliği ekranın %80'i ile sınırlayın */
+    overflow-y: auto; /* Dikey kaydırma çubuğunu etkinleştirin */
+    scrollbar-width: thin; /* Tarayıcı uyumlu ince kaydırma çubuğu */
+    scrollbar-color: #666 rgba(0, 0, 0, 0.3); /* Kaydırma çubuğu rengi */
+  }
+  .admin-reply-offer-list::-webkit-scrollbar {
+    width: 8px; /* Kaydırma çubuğunun genişliği */
+  }
+  
+  .admin-reply-offer-list::-webkit-scrollbar-thumb {
+    background: #666; /* Kaydırma çubuğunun rengi */
+    border-radius: 4px; /* Yuvarlatılmış köşeler */
+  }
+  
+  .admin-reply-offer-list::-webkit-scrollbar-thumb:hover {
+    background: #444; /* Hover durumunda daha koyu bir renk */
+  }
+  
+  .admin-reply-offer-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  .admin-reply-offer-item:hover {
+    background: rgb(151, 132, 24);
+  }
+  
+  .admin-panel-offer-item.selected {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  .admin-reply-offer-detail {
+    width: 50%;
+    margin-top: 20px;
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px; /* Öğeler arasına boşluk bırak */
+}
+
+.admin-reply-offer-detail-left {
+  text-align: center;
+  margin-left: 25px;
+}
+.admin-reply-offer-detail-price {
+  color: rgb(209, 181, 20);
+  font-weight: bold;
+  
+}
+.admin-reply-offer-detail-price-strong {
+  color: white;
+}
+  .admin-reply-offer-detail-car {
+    margin-top: 0px;
+    border: 4px solid transparent; /* Kenarlık için şeffaf bir temel belirliyoruz */
+    border-image: linear-gradient(to right, black 50%, orange 50%); /* Çerçevenin sol yarısı siyah, sağ yarısı sarı */
+    background-image: url('../Images/warehouse-2696005_1920.jpg');
+
+    border-image-slice: 1; /* Çerçeve hatlarının düzgün görünmesini sağlıyoruz */
+  }
+  .admin-reply-offer-car-info {
+    font-size: 0.9rem;
+  color: #333;
+  text-align: center;
+  
+  }
+  .admin-reply-offer-car-image {
+    margin-left: 0px;
+    object-fit: cover;
+    max-width: 320px;
+    max-height: 180px;
+    border-radius: 10px;
+    height: 67%; 
+  }
+  .admin-reply-offer-button-left {
+    margin-top: 3px;
+    background-color: gold ;
+    margin-right: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    height: 23px;
+  }
+  .admin-reply-offer-button-left:hover {
+    background-color: rgb(220, 155, 33)
+  }
+  .admin-reply-offer-button-right {
+    background-color: red ;
+    cursor: pointer;
+    margin-right: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    height: 24px;
+  }
+  .admin-reply-offer-button-right:hover {
+    background-color: #e03636;
+  }
+.admin-reply-offer-filtered {
+  display: flex;
+  justify-content: space-between; /* İki alanın yan yana yerleşmesini sağlar */
+  align-items: flex-start; /* İçerikleri yukarı hizalar */
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: rgba(2, 2, 2, 0.62);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 960px;
+}
+
+.admin-reply-accepted,
+.admin-reply-rejected {
+  width: 48%; /* İki alanın eşit genişlikte olmasını sağlar */
+  max-height: 50vh; /* Yüksekliği ekranın %80'i ile sınırlayın */
+  overflow-y: auto; /* Dikey kaydırma çubuğunu etkinleştirin */
+  scrollbar-width: thin; /* Tarayıcı uyumlu ince kaydırma çubuğu */
+  scrollbar-color: #666 rgba(0, 0, 0, 0.3); /* Kaydırma çubuğu rengi */
+}
+
+
+.admin-reply-rejected {
+  margin-left: 10px; /* Sağ kısımda biraz boşluk bırakır */
+}
+
+/* Teklif kartları için stil */
+.admin-reply-offer-items {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+/* Kabul edilen tekliflerin rengi */
+.accepted {
+  border-left: 4px solid gold;
+}
+.accepted:hover {
+  background: rgb(151, 132, 24);
+
+}
+
+/* Reddedilen tekliflerin rengi */
+.rejected {
+  border-left: 4px solid red;
+}
+.rejected:hover {
+  background: rgb(158, 26, 26);
+
+}
+.admin-reply-accepted-h2 {
+  text-align: center;
+  margin-top: 0px;
+}
+.admin-reply-rejected-h2 {
+  text-align: center;
+  margin-top: 0px;
+}
+.admin-panel-no-offer {
+  text-align: center;
+  margin-top: -5px;
+}  
+.admin-offer-reply-status {
+  background-color: rgba(255, 255, 255, 0.1);
+
+}
+.accepted-detail{
+  border-left: 4px solid gold;
+  background: rgb(151, 132, 24);
+
+}
+.rejected-detail 
+{
+  border-left: 4px solid red;
+  background: rgb(158, 26, 26);
+
+}

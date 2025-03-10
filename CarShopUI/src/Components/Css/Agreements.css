@@ -1,0 +1,186 @@
+/* Genel Konteyner */
+.user-panel-myoffer-container {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlık */
+.user-panel-myoffer-title {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(150deg, white, gold);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906);
+}
+
+/* İki ana bölümü yatay hizala */
+.user-panel-myoffer-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Kabul edilen ve reddedilen teklif bölümleri */
+.user-panel-myoffer-section {
+  flex: 1;
+  padding: 15px;
+  background-color: rgba(2, 2, 2, 0.62);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Kabul edilenler başlık */
+.user-panel-myoffer-subtitle-left {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  background: linear-gradient(150deg, white, gold);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906);
+}
+
+/* Reddedilenler başlık */
+.user-panel-myoffer-subtitle-right {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  background: linear-gradient(150deg, white, red);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906);
+}
+
+/* Teklif kartı */
+.user-panel-myoffer-item-left,
+.user-panel-myoffer-item-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Kabul edilen kart */
+.user-panel-myoffer-item-left {
+  border: 1px solid gold;
+}
+
+/* Reddedilen kart */
+.user-panel-myoffer-item-right {
+  border: 1px solid red;
+}
+
+/* Sol taraftaki içerik */
+.user-panel-myoffer-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Teklif bilgisi ve buton */
+.user-panel-myoffer-bid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* Teklif bilgisi */
+.user-panel-myoffer-bid p {
+  font-size: 16px;
+  color: white;
+}
+
+/* Geçiş butonu */
+.user-panel-myoffer-next-btn {
+  background-color: gold;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Araba resimleri */
+.user-panel-myoffer-img-left,
+.user-panel-myoffer-img-right {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  
+}
+
+/* Bilgiler */
+.user-panel-myoffer-details p {
+  margin: 5px 0;
+  color: white;
+}
+
+/* Boş mesaj */
+.user-panel-myoffer-empty {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+.user-panel-myoffer-item-left-p, .user-panel-myoffer-item-right-p
+{
+  margin-right: 0px;
+  margin-left: 20px;
+}
+.price-left-offer,.price-right-offer {
+  color: gold;
+}
+/* Parent container for buttons */
+.button-container-right {
+  display: flex; /* Yatayda hizalamak için */
+  justify-content: center; /* Ortalamak için */
+  gap: 30px; /* Butonlar arasına mesafe eklemek için */
+}
+
+/* Optional: Butonları daha rahat stilize etmek için */
+.btn-user-offer-prev-right, .btn-user-offer-next-right {
+  padding: 8px; /* Butonların içindeki alan */
+  border: none;
+  background-color: gold; /* Arka plan rengi */
+  cursor: pointer;
+  color: black;
+}
+
+.btn-user-offer-prev-right:disabled, .btn-user-offer-next-right:disabled {
+  background-color: #ccc; /* Disabled durumunda arka plan rengi */
+  cursor: not-allowed; /* Disabled butonun işaretçisi */
+}
+/* Parent container for buttons on the left */
+.button-container-left {
+  display: flex; /* Yatayda hizalamak için */
+  justify-content: center; /* Ortalamak için */
+  gap: 30px; /* Butonlar arasına mesafe eklemek için */
+}
+
+/* Optional: Butonları daha rahat stilize etmek için */
+.btn-user-offer-pref-left, .btn-user-offer-next-left {
+  padding: 8px; /* Butonların içindeki alan */
+  border: none;
+  background-color: gold; /* Arka plan rengi */
+  color: black;
+  cursor: pointer;
+}
+
+.btn-user-offer-pref-left:disabled, .btn-user-offer-next-left:disabled {
+  background-color: #ccc; /* Disabled durumunda arka plan rengi */
+  cursor: not-allowed; /* Disabled butonun işaretçisi */
+}

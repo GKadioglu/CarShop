@@ -1,0 +1,341 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\DCM.kapak_.ara_-600x450.jpg",
+      "PackagePath": "staticwebassets\\images\\DCM.kapak_.ara_-600x450.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car1.jpg",
+      "PackagePath": "staticwebassets\\images\\car1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car10.jpg",
+      "PackagePath": "staticwebassets\\images\\car10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car11.jpg",
+      "PackagePath": "staticwebassets\\images\\car11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car12.jpg",
+      "PackagePath": "staticwebassets\\images\\car12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car13.jpg",
+      "PackagePath": "staticwebassets\\images\\car13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car14.jpg",
+      "PackagePath": "staticwebassets\\images\\car14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car15.jpg",
+      "PackagePath": "staticwebassets\\images\\car15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car16.jpg",
+      "PackagePath": "staticwebassets\\images\\car16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car17.jpg",
+      "PackagePath": "staticwebassets\\images\\car17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car18.jpg",
+      "PackagePath": "staticwebassets\\images\\car18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car19.jpg",
+      "PackagePath": "staticwebassets\\images\\car19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car2.jpg",
+      "PackagePath": "staticwebassets\\images\\car2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car20.jpg",
+      "PackagePath": "staticwebassets\\images\\car20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car21.jpg",
+      "PackagePath": "staticwebassets\\images\\car21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car22.jpg",
+      "PackagePath": "staticwebassets\\images\\car22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car23.jpg",
+      "PackagePath": "staticwebassets\\images\\car23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car24.jpg",
+      "PackagePath": "staticwebassets\\images\\car24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car25.jpg",
+      "PackagePath": "staticwebassets\\images\\car25.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car26.jpg",
+      "PackagePath": "staticwebassets\\images\\car26.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car27.jpg",
+      "PackagePath": "staticwebassets\\images\\car27.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car28.jpg",
+      "PackagePath": "staticwebassets\\images\\car28.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car29.jpg",
+      "PackagePath": "staticwebassets\\images\\car29.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car3.jpg",
+      "PackagePath": "staticwebassets\\images\\car3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car30.jpg",
+      "PackagePath": "staticwebassets\\images\\car30.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car31.jpg",
+      "PackagePath": "staticwebassets\\images\\car31.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car32.jpg",
+      "PackagePath": "staticwebassets\\images\\car32.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car33.jpg",
+      "PackagePath": "staticwebassets\\images\\car33.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car34.jpg",
+      "PackagePath": "staticwebassets\\images\\car34.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car35.jpg",
+      "PackagePath": "staticwebassets\\images\\car35.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car36.jpg",
+      "PackagePath": "staticwebassets\\images\\car36.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car37.jpg",
+      "PackagePath": "staticwebassets\\images\\car37.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car38.jpg",
+      "PackagePath": "staticwebassets\\images\\car38.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car39.jpg",
+      "PackagePath": "staticwebassets\\images\\car39.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car4.jpg",
+      "PackagePath": "staticwebassets\\images\\car4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car5.jpg",
+      "PackagePath": "staticwebassets\\images\\car5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car6.jpg",
+      "PackagePath": "staticwebassets\\images\\car6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car7.jpg",
+      "PackagePath": "staticwebassets\\images\\car7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car8.jpg",
+      "PackagePath": "staticwebassets\\images\\car8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\car9.jpg",
+      "PackagePath": "staticwebassets\\images\\car9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\category1.jpg",
+      "PackagePath": "staticwebassets\\images\\category1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\category2.jpg",
+      "PackagePath": "staticwebassets\\images\\category2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\category3.jpg",
+      "PackagePath": "staticwebassets\\images\\category3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\category4.jpg",
+      "PackagePath": "staticwebassets\\images\\category4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\category5.jpg",
+      "PackagePath": "staticwebassets\\images\\category5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\dergi1.jpg",
+      "PackagePath": "staticwebassets\\images\\dergi1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\dergi2.jpg",
+      "PackagePath": "staticwebassets\\images\\dergi2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\dergi3.jpg",
+      "PackagePath": "staticwebassets\\images\\dergi3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\dergi4.jpg",
+      "PackagePath": "staticwebassets\\images\\dergi4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\images\\dergi5.jpg",
+      "PackagePath": "staticwebassets\\images\\dergi5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car1.glb",
+      "PackagePath": "staticwebassets\\models\\Car1.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car10.glb",
+      "PackagePath": "staticwebassets\\models\\Car10.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car11.glb",
+      "PackagePath": "staticwebassets\\models\\Car11.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car12.glb",
+      "PackagePath": "staticwebassets\\models\\Car12.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car13.glb",
+      "PackagePath": "staticwebassets\\models\\Car13.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car14.glb",
+      "PackagePath": "staticwebassets\\models\\Car14.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car15.glb",
+      "PackagePath": "staticwebassets\\models\\Car15.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car16.glb",
+      "PackagePath": "staticwebassets\\models\\Car16.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car17.glb",
+      "PackagePath": "staticwebassets\\models\\Car17.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car18.glb",
+      "PackagePath": "staticwebassets\\models\\Car18.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car19.glb",
+      "PackagePath": "staticwebassets\\models\\Car19.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car2.glb",
+      "PackagePath": "staticwebassets\\models\\Car2.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car20.glb",
+      "PackagePath": "staticwebassets\\models\\Car20.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car21.glb",
+      "PackagePath": "staticwebassets\\models\\Car21.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car22.glb",
+      "PackagePath": "staticwebassets\\models\\Car22.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car23.glb",
+      "PackagePath": "staticwebassets\\models\\Car23.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car24.glb",
+      "PackagePath": "staticwebassets\\models\\Car24.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car25.glb",
+      "PackagePath": "staticwebassets\\models\\Car25.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car26.glb",
+      "PackagePath": "staticwebassets\\models\\Car26.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car27.glb",
+      "PackagePath": "staticwebassets\\models\\Car27.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car28.glb",
+      "PackagePath": "staticwebassets\\models\\Car28.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car29.glb",
+      "PackagePath": "staticwebassets\\models\\Car29.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car3.glb",
+      "PackagePath": "staticwebassets\\models\\Car3.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car30.glb",
+      "PackagePath": "staticwebassets\\models\\Car30.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car4.glb",
+      "PackagePath": "staticwebassets\\models\\Car4.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car5.glb",
+      "PackagePath": "staticwebassets\\models\\Car5.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car6.glb",
+      "PackagePath": "staticwebassets\\models\\Car6.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car7.glb",
+      "PackagePath": "staticwebassets\\models\\Car7.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car8.glb",
+      "PackagePath": "staticwebassets\\models\\Car8.glb"
+    },
+    {
+      "Id": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\wwwroot\\models\\Car9.glb",
+      "PackagePath": "staticwebassets\\models\\Car9.glb"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CarShop.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CarShop.API.props",
+      "PackagePath": "build\\CarShop.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CarShop.API.props",
+      "PackagePath": "buildMultiTargeting\\CarShop.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CarShop.API.props",
+      "PackagePath": "buildTransitive\\CarShop.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

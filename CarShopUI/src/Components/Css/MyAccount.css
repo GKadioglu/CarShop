@@ -1,0 +1,430 @@
+/* Genel Tasarım */
+.my-account {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sol ve Sağ Bölüm Eşit Genişlikte */
+.account-left-side, .account-right-side {
+    width: 49%;
+}
+
+/* Sol Bölüm: Hesap Bilgileri ve Favori Araçlar */
+.account-user-info {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+}
+.account-user-info h2{
+    margin-left: 30px;
+}
+
+.account-user-info .account-user-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.account-user-info .account-user-profile-photo {
+    width: 180px;
+    height: 130px;
+    border-radius: 20%;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.edit-user-input {
+    margin-left: 10px;
+}
+
+button.account-btn-edit {
+    background-color: gold;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.account-btn-save {
+    text-align: center;
+    background-color: gold;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 100px;
+}
+
+button.account-btn-edit:hover, .account-btn-save:hover {
+    background-color: #e67e22; /* Hover buton rengi */
+}
+.favorite-cars {
+    margin-top: 20px;
+    margin-left: 5px;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(26, 24, 24, 0.3), rgba(0, 0, 0, 0.9));
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.favorite-cars-h3 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 1.4rem;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906);
+}
+
+/* Favori Araçlar */
+.account-favorite-cars-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.btn-favorite-incele {
+    position: absolute;
+    top: -20%; /* Dikeyde tam ortalamak için */
+    right: 0px; /* Sağ tarafta hizalamak için */
+    transform: translateY(-50%); /* Dikeyde tam ortalamak için */
+    height: 20px; /* Buton yüksekliği */
+    text-align: center;
+    padding: 5px 15px; /* Buton içindeki yazıya göre genişlik ayarı */
+    background-color: gold;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.account-car-card {
+    position: relative; /* Butonun kart içinde doğru konumlanması için */
+    width: 200px;
+    height: 180px;
+    margin: 10px;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid transparent;
+    border-image: linear-gradient(to right, black 50%, orange 50%);
+    border-image-slice: 1;
+}
+
+/* Araç resminin boşluklarını kaldırdık */
+.account-car-card img {
+    width: 100%; /* Resmin genişliği kartın tamamına yayılacak şekilde */
+    height: 130px; /* Resmin yüksekliği de kartın tamamını kaplayacak şekilde */
+    border-radius: 5px;
+    object-fit: cover; /* Resmi orantılı şekilde sığdırıyoruz */
+    margin: 0; /* Resmin etrafındaki boşluğu sıfırladık */
+    position: relative;
+
+}
+
+/* Araç bilgilerini içeren alt bölüm */
+.account-car-details {
+    background-size: cover; /* Arka planın tamamını kaplaması için */
+    background-position: center; /* Arka planın ortalanmasını sağlıyoruz */
+    padding: 10px;
+    flex-grow: 1; /* Alt kısmı tamamen doldurmasını sağlıyoruz */
+    position: relative;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* Araç bilgileri stilini düzenliyoruz */
+.account-car-details p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.account-car-card-price {
+    font-weight: bold;
+    color: gold;
+}
+.btn-account-prev, .btn-account-next {
+    margin: 10px;
+    color: black;
+    background-color: gold;
+    height: 25px;
+    cursor: pointer;
+}
+
+
+/* Sağ Bölüm: Menü Kartları ve Mesajlar */
+.account-menu-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 0px;
+}
+
+.account-card {
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 120px;
+    margin-left: 5px;
+    height: 100px; /* Kartın yüksekliğini artırdık */
+    padding: 20px; /* İçerik için padding ekledik */
+    display: flex;
+    flex-direction: column; /* İçeriği dikey olarak hizaladık */
+    justify-content: flex-end; /* Başlığı altta hizaladık */
+    position: relative;
+    overflow: hidden;
+}
+
+.account-card-h3 {
+    border: 1px solid rgba(255, 217, 0, 0.616);
+    font-weight: bold;
+    color: white; /* Başlık rengini koyu yaptık */
+    letter-spacing: 1px; /* Başlık harf aralarını açtık */
+    background-color: rgba(0, 0, 0, 0.6); /* Başlık için yarı saydam arka plan ekledik */
+    border-radius: 5px; /* Başlık etrafına yuvarlak köşe ekledik */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Başlığa gölge efekti ekledik */
+    padding-bottom: 0px; /* Alt boşluk ekledik */
+}
+.account-card-link {
+    text-decoration: none; /* Link alt çizgisi kaldırıldı */
+    color: inherit; /* Link rengini başlıkla uyumlu yapıyoruz */
+    display: block; /* Linki blok element yaparak başlığı kapsamasını sağlıyoruz */
+}
+
+.card-setting-1 {
+    background-image: url('../Images/accountMenuImages/setting1.jpg');
+    background-position: center;
+    background-size: cover; /* Resmi kapsayan boyut */
+    background-repeat: no-repeat; /* Resmin tekrarlanmaması için */
+}
+.card-setting-2 {
+    background-image: url('../Images/accountMenuImages/setting2.png');
+    background-position: center;
+    background-size: cover; /* Resmi kapsayan boyut */
+    background-repeat: no-repeat; /* Resmin tekrarlanmaması için */
+    position: relative;
+}
+.card-setting-3 {
+    background-image: url('../Images/accountMenuImages/setting3.png');
+    background-position: center;
+    background-size: cover; /* Resmi kapsayan boyut */
+    background-repeat: no-repeat; /* Resmin tekrarlanmaması için */
+    position: relative;
+}
+.card-setting-4 {
+    background-image: url('../Images/accountMenuImages/setting4.png');
+    background-position: center;
+    background-size: cover; /* Resmi kapsayan boyut */
+    background-repeat: no-repeat; /* Resmin tekrarlanmaması için */
+    position: relative;
+}
+.user-panel-notification-badge {
+    position: absolute;
+    top: 5px; /* Üstten 5px */
+    right: 5px; /* Sağdan 5px */
+    background-color: gold; /* Kırmızı arka plan */
+    color: black; /* Beyaz yazı */
+    border-radius: 50%; /* Yuvarlak şekil */
+    padding: 5px 10px; /* İçerik için alan */
+    font-size: 15px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+  }
+.card-setting-5 {
+    background-image: url('../Images/accountMenuImages/setting5.jpg');
+    background-position: center;
+    background-size: cover; /* Resmi kapsayan boyut */
+    background-repeat: no-repeat; /* Resmin tekrarlanmaması için */
+}
+.card-setting-6 {
+    background-image: url('../Images/accountMenuImages/setting6.jpg');
+    background-position: center;
+    background-size: cover; /* Resmi kapsayan boyut */
+    background-repeat: no-repeat; /* Resmin tekrarlanmaması için */
+    position: relative;
+
+}
+.account-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.account-card p {
+    font-size: 0.9em;
+    
+}
+
+.account-messages {
+    margin-top: 20px;
+    margin-left: 5px;
+    background: linear-gradient(135deg, rgba(26, 24, 24, 0.3), rgba(0, 0, 0, 0.9));
+    border-radius: 10px; /* Köşeleri yuvarlatıyoruz */
+    padding: 15px; /* İçerik alanını genişletiyoruz */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Hafif bir gölge efekti */
+    min-height: 177px; /* Minimum yükseklik ekliyoruz */
+    position: relative;
+}
+.account-message-h3 {
+    margin-top: 0;
+    text-align: center; /* Başlığı yatayda ortalıyoruz */
+    margin-bottom: 0px; /* Başlığı aşağıdaki elemanlara yaklaştırıyoruz */
+    font-size: 1.3rem;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+}
+.account-message-message {
+    margin-bottom: 10px;
+}
+.account-message-h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+}
+/* Mesajlar */
+.account-message-list {
+    margin-top: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+.account-message-item {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.account-message-item p {
+    font-size: 0.9em;
+    color: black;
+}
+ 
+.quoted-message {
+    padding: 1px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, black 50%, orange 50%);
+    border-image-slice: 1;
+}
+  .quoted-message h5 {
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 20px;
+  }quoted-message-card-button
+  
+  .quoted-message-card {
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .quoted-message-card-button {
+    margin-left: 10px;
+    padding: 3px;
+    font-size: 13px;
+    background-color: gold;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .quoted-message-card-button:hover {
+    background-color: orange;
+  }
+  .message-switch-container {
+    position: absolute;  /* Kapsayıcıyı mutlak konumlandırıyoruz */
+    top: 40%;  /* Yükseklik yönünde ortalıyoruz */
+    right: 5%;  /* Sağda yer alacak */
+    transform: translateY(-50%);  /* Yatayda tam ortalama için */
+  }
+  
+  .message-switch-icon {
+    color: black;
+    background-color: gold;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .notification-badge-offer {
+    position: absolute;
+    top: 5px; /* Üstten 5px */
+    right: 5px; /* Sağdan 5px */
+    background-color: gold; /* Kırmızı arka plan */
+    color: black; /* Beyaz yazı */
+    border-radius: 50%; /* Yuvarlak şekil */
+    padding: 5px 10px; /* İçerik için alan */
+    font-size: 15px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+  }
+  .favorite-badge {
+    position: absolute;
+    top: 5px; /* Üstten 5px */
+    right: 5px; /* Sağdan 5px */
+    background-color: gold; /* Kırmızı arka plan */
+    color: black; /* Beyaz yazı */
+    border-radius: 50%; /* Yuvarlak şekil */
+    padding: 5px 10px; /* İçerik için alan */
+    font-size: 15px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+  }
+  .message-count-notification {
+    position: absolute;
+    top: 5px; /* Üstten 5px */
+    right: 5px; /* Sağdan 5px */
+    background-color: gold; /* Kırmızı arka plan */
+    color: black; /* Beyaz yazı */
+    border-radius: 50%; /* Yuvarlak şekil */
+    padding: 5px 10px; /* İçerik için alan */
+    font-size: 15px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+  }
+  @media (max-width: 768px) {
+    .my-account {
+        flex-direction: column;
+    }
+    .account-left-side, .account-right-side {
+        width: 100%;
+    }
+    .account-menu-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 1024px) {
+    .my-account {
+        flex-direction: column;
+    }
+    .account-left-side, .account-right-side {
+        width: 100%;
+    }
+    .account-menu-cards {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+}
+@media (max-width: 576px) {
+    .my-account {
+        flex-direction: column;
+    }
+    .account-left-side, .account-right-side {
+        width: 100%;
+    }
+    .account-menu-cards {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    .account-user-info {
+        flex-direction: column;
+    }
+    .account-user-info .account-user-profile-photo {
+        height: 80px;
+    }
+}

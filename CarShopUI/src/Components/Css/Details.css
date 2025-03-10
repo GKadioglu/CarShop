@@ -1,0 +1,219 @@
+/* Genel düzenlemeler */
+.car-details-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Sayfa boyutunda bir yükseklik kullan */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Resmin bulunduğu alan */
+  .car-image-container {
+    width: 250%; /* Yatayda ekranın sol yarısını kaplar */
+  }
+  .car-info-container-h1 {
+    margin-top: 2px;
+  }
+  .car-image-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .car-image {
+    width: 100%; /* Resim yatayda container'ı kaplar */
+    height: 100%; /* Resim dikeyde container'ı kaplar */
+    object-fit: cover; /* Resmi container'a uygun şekilde sığdır */
+  }
+  
+  /* Bilgilerin bulunduğu alan (Kart) */
+  .car-info-container {
+    width: 50%; /* Yatayda ekranın sağ yarısını kaplar */
+    padding: 20px; /* Bilgiler kısmına padding ekledik */
+    box-sizing: border-box; /* Padding'in dışa taşmaması için box-sizing */
+
+    border-radius: 20px; /* Kartın köşelerini yuvarlat */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge ekleyerek kartı öne çıkar */
+
+    overflow-y: auto; /* İçerik uzun olursa kaydırma çubuğu ekler */
+    overflow-x: hidden; /* Yatay taşmayı gizler */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* İçerikleri en üstten alt kısma kadar yerleştir */
+
+    border: 2px solid transparent; /* Kenarlık için şeffaf bir temel belirliyoruz */
+    border-image: linear-gradient(to right, gold 50%, gold 50%); /* Çerçevenin sol yarısı siyah, sağ yarısı sarı */
+    border-image-slice: 1;
+
+    overflow: hidden; /* Pseudo-element taşmalarını gizlemek için */
+
+    position: relative; /* ::before için referans noktası */
+}
+
+.car-info-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Gölgenin yükseklik oranı */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent); /* Aşağıda yoğun, yukarıda şeffaf */
+    pointer-events: none; /* Tıklanabilir alanları etkilemesin */
+    z-index: 1; /* İçerik arka planda kalsın */
+}
+  
+  /* Karttaki bilgiler */
+  .car-info {
+    text-align: center; /* Yazıları ortalar */
+    color: #fff; /* Yazı rengini beyaz yap */
+    margin-bottom: 30px; /* Bilgiler kısmı arasında boşluk */
+    padding: 20px; /* İçeriye padding ekleyerek daha ferah bir alan sağla */
+    
+    border-radius: 10px; /* Köşeleri yuvarlat */
+  }
+  
+  .car-info h1 {
+    font-size: 2em; /* Başlık boyutunu büyüt */
+    color: gold; /* Başlık rengini sarı yap */
+    margin-bottom: 10px; /* Başlık ile içerik arasında boşluk */
+  }
+  
+  .car-info p {
+    font-size: 1.1em; /* Paragraf yazı boyutunu büyüt */
+    color: white; /* Paragraf rengini daha açık beyaz yap */
+    margin-bottom: 15px; /* Paragraflar arasında boşluk */
+  }
+  
+  .car-info strong {
+    color: gold; /* Vurgulanan kısımları sarı yap */
+  }
+  
+  .car-info h2 {
+    font-size: 1.5em; /* Başlık boyutunu büyüt */
+    color: white; /* Rengi kırmızı yap */
+    margin-top: 20px; /* Başlık ile içerik arasına boşluk */
+  }
+  
+  .car-info li {
+    font-size: 1em;
+    color: #ecf0f1; /* Liste öğelerinin rengini açık gri yap */
+    margin-bottom: 8px; /* Liste öğeleri arasında boşluk */
+  }
+  
+  .car-info li strong {
+    color: gold; /* Liste öğesindeki vurgu rengini sarı yap */
+  }
+  .btn-contactUs {
+    text-align: center;
+    margin-top: 20px;
+    height: 35px; /* Biraz daha yüksek yaparak daha dikkat çekici hale getir */
+    width: 150px; /* Genişlik ekle */
+    background-color: black; /* Parlak bir mavi renk */
+    color: white; /* Yazı rengini beyaz yap */
+    font-size: 16px; /* Yazı boyutunu büyüt */
+    font-weight: bold; /* Yazıyı kalınlaştır */
+    border: none; /* Varsayılan kenarlıkları kaldır */
+    border-radius: 8px; /* Köşeleri yuvarlat */
+    cursor: pointer; /* Üzerine gelindiğinde tıklanabilir olduğunu göster */
+    box-shadow: 3px 2px 2px rgb(187, 239, 16); /* Hafif gölge efekti */
+    transition: all 0.3s ease; /* Geçiş efektleri için süre belirle */
+  }
+  
+  /* Hover efekti */
+  .btn-contactUs:hover, .btn-contact-make-an-offer:hover {
+    background-color: black; /* Daha koyu bir mavi yap */
+    box-shadow: 3px 2px 2px rgb(187, 239, 16); /* Hafif gölge efekti */
+    transform: scale(1.05); /* Hafif büyütme efekti */
+    color: gold;
+  }
+  
+  /* Aktif tıklama efekti */
+  .btn-contactUs:active, .btn-contact-make-an-offer:active {
+    background-color: black; /* Daha koyu bir ton */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Gölgeyi küçült */
+    transform: scale(0.98); /* Hafif küçülme efekti */
+  }
+  .btn-contact-make-an-offer {
+    text-align: center;
+    margin-top: 20px;
+    height: 35px; /* Biraz daha yüksek yaparak daha dikkat çekici hale getir */
+    width: 150px; /* Genişlik ekle */
+    background-color: black; /* Parlak bir mavi renk */
+    color: white; /* Yazı rengini beyaz yap */
+    font-size: 16px; /* Yazı boyutunu büyüt */
+    font-weight: bold; /* Yazıyı kalınlaştır */
+    border: none; /* Varsayılan kenarlıkları kaldır */
+    border-radius: 8px; /* Köşeleri yuvarlat */
+    cursor: pointer; /* Üzerine gelindiğinde tıklanabilir olduğunu göster */
+    box-shadow: 3px 2px 2px rgb(187, 239, 16); /* Hafif gölge efekti */
+    transition: all 0.3s ease; /* Geçiş efektleri için süre belirle */
+  }
+  .btn-3dmodel {
+    position: absolute;
+    text-align: center;
+    margin-top: 30px;
+    height: 33px; /* Biraz daha yüksek yaparak daha dikkat çekici hale getir */
+    width: 150px; /* Genişlik ekle */
+    background-color: black; /* Parlak bir mavi renk */
+    color: white; /* Yazı rengini beyaz yap */
+    font-size: 16px; /* Yazı boyutunu büyüt */
+    font-weight: bold; /* Yazıyı kalınlaştır */
+    border: none; /* Varsayılan kenarlıkları kaldır */
+    border-radius: 120px; /* Köşeleri yuvarlat */
+    cursor: pointer; /* Üzerine gelindiğinde tıklanabilir olduğunu göster */
+    box-shadow: 3px 2px 2px rgb(187, 239, 16); /* Hafif gölge efekti */
+    transition: all 0.3s ease; /* Geçiş efektleri için süre belirle */
+  }
+  .btn-3dmodel:hover {
+    background-color: black; /* Daha koyu bir mavi yap */
+    box-shadow: 3px 2px 2px rgb(187, 239, 16); /* Hafif gölge efekti */
+    transform: scale(1.05); /* Hafif büyütme efekti */
+    color: gold;
+  }
+  .btn-3model:active {
+    background-color: black; /* Daha koyu bir ton */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Gölgeyi küçült */
+    transform: scale(0.98); /* Hafif küçülme efekti */
+  }
+  .cart-logo {
+    margin-top: 5px;
+    max-width: 80%; /* Logonun boyutunu sınırlayın */
+    max-height: 100px; /* Maksimum yüksekliği belirleyin */
+    margin-bottom: 0;
+    align-self: center; /* Logoyu yatay ortalar */
+    
+  }
+  .car-3dmodel {
+    width: 100%; /* Alanı tamamen kaplar */
+    height: 100%; /* Resim boyutunda görünür */
+    border: none; /* Çerçeve olmadan göster */
+  }
+  .canvas-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 oran */
+  }
+  .canvas-wrapper canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Mobil uyum için */
+  @media (max-width: 768px) {
+    .car-details-container {
+      flex-direction: column; /* Mobilde dikey sıralama */
+    }
+  
+    .car-image-container,
+    .car-info-container {
+      width: 100%; /* Her iki container'ı da %100 genişliğe al */
+    }
+  
+    .car-info-container {
+      margin-top: 0px;
+      padding: 0px; /* Mobilde padding'i küçült */
+    }
+  }

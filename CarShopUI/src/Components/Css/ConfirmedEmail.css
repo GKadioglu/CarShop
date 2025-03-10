@@ -1,0 +1,47 @@
+/* confirmedEmail.css */
+.confirmation-message {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    margin-top: 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;  /* Sayfanın geri kalanına göre konumlandırabilmek için */
+    top: 40%;  /* Yatayda ortalamak için */
+    left: 50%;  /* Dikeyde ortalamak için */
+    transform: translate(-50%, -50%);  /* Gerçekten tam ortalamak için */
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+}
+
+.confirmation-success {
+    margin-top: 50px;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+}
+
+.confirmation-failure {
+    margin-top: 50px;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+}
+.confirmation-link {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.confirmation-message h2 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.confirmation-message p {
+    font-size: 1.1rem;
+    color: white;
+}

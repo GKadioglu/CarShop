@@ -1,0 +1,243 @@
+.admin-car-edit-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.admin-car-edit-upper {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+ /* Menü */
+.admin-car-edit-menu {
+  flex: 1;
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+}
+
+.admin-car-edit-menu-item {
+  padding: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: background-color 0.3s, border 0.3s;
+  color: white;
+}
+
+.admin-car-edit-menu-item:hover {
+  background-color: black;
+}
+
+.admin-car-edit-menu-item.selected {
+  border-color: gold;
+  font-weight: bold;
+}
+
+.admin-car-edit-card {
+  flex: 1;
+  height: 400px;  
+  width: 40%;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  border: 5px solid transparent;
+  border-image: linear-gradient(to right, black 50%, orange 50%);
+  border-image-slice: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-card-image-wrapper {
+  position: relative;
+  text-align: center;
+  margin-bottom: 0;
+  overflow: hidden;
+  flex: 1;
+  width: 100%; /* Genişlik tüm alanı kaplasın */
+  height: 250px; /* Sabit yükseklik ekliyoruz */
+}
+
+.admin-car-edit-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover; /* Resim kırpılmasın diye cover kullanmaya devam ediyoruz */
+}
+
+.admin-car-edit-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+
+.admin-car-edit-info p {
+  margin: 5px 0;
+}
+
+.admin-card-edit-title {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 2px;
+}
+
+.admin-price-edit-text {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0px;
+
+}
+
+.price {
+  font-weight: bold;
+  color: gold;
+  text-align: center;
+  align-items: center;
+}
+
+/* Yeni metin kutusu stili */
+.admin-car-edit-info {
+  position: absolute;
+  bottom: 0; /* Resmin altına yerleştirmek için */
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Hafif siyah bir gölge */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 0 0 8px 8px; /* Alt köşeleri yuvarlatmak için */
+}
+
+.admin-car-edit-info p {
+  margin: 5px 0;
+}
+
+.delete-car-btn {
+  position: absolute;
+  top: 50%; /* Dikeyde tam ortalamak için */
+  right: 10px; /* Sağ tarafta hizalamak için */
+  transform: translateY(-50%); /* Dikeyde tam ortalamak için */
+  height: 35px; /* Buton yüksekliği */
+  width: 55px;
+  padding: 5px 15px; /* Buton içindeki yazıya göre genişlik ayarı */
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  margin-right: 60px;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-car-btn:hover {
+  background-color: #e03636;
+}
+
+/* Ana konteyner */
+.admin-new-car {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 0;
+  align-items: start;
+  background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+  padding: 20px;
+  grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+}
+
+/* Her form grubunun stili */
+.admin-new-car-form-group {
+  margin: 10px;
+}
+
+.admin-new-car-form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  color: white;
+}
+
+.admin-new-car-form-group input[type="text"],
+.admin-new-car-form-group input[type="number"],
+.admin-new-car-form-group input[type="file"],
+.admin-new-car-form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Kategori ve model dropdown'ları aynı boyutta */
+.admin-new-car-form-group select {
+  width: 100%;
+}
+
+/* Başlık */
+.admin-new-car-title {
+  margin-top: 0px;
+  font-size: 30px;
+  margin-bottom: 0;
+  text-align: center;
+  grid-column: span 3; /* Başlık tüm alanı kaplasın */
+}
+
+/* Resim yükleme ve önizleme alanı */
+.image-preview {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Sağdaki "Kaydet" butonu */
+.add-new-car-button {
+  grid-column: 3 / span 1;
+  align-self: center;
+  padding: 10px 20px;
+  background-color: gold;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-new-car-button:hover {
+  background-color: orange;
+}
+
+/* Dinamik kart yapısı */
+.image-preview-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.image-preview-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+

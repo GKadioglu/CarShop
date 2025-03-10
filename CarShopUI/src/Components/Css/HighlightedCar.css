@@ -1,0 +1,143 @@
+/* Dergi Kapağı Bölümü */
+body, html {
+  margin: 0; /* Kenar boşluklarını sıfırlıyoruz */
+  padding: 0; /* İç boşlukları sıfırlıyoruz */
+  width: 100%; /* Sayfa genişliğini tam yapıyoruz */
+  height: 100%; /* Sayfa yüksekliğini tam yapıyoruz */
+  box-sizing: border-box; /* Padding ve border dahil olacak şekilde boyut hesaplanmasını sağlıyoruz */
+}
+.magazine-cover {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Kapağın ekranı tamamen kaplamasını sağlar */
+  background-size: cover; /* Resmin tamamının alanı kaplaması */
+  background-position: center;
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+  margin: 0; /* Sayfanın her yerindeki boşluğu kaldırır */
+  padding: 0; /* Sayfanın her yerindeki iç boşluğu kaldırır */
+}
+
+/* Yarı saydam bir overlay ekleyerek yazıların daha belirgin olmasını sağlamak */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Hafif siyah saydamlık */
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-left: 0;
+}
+
+/* Haftanın Öne Çıkanları - Sol Üst */
+.magazine-title {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 3.2rem;
+  margin-top: 10px;
+  color: white; /* Sarı tonlarında dikkat çekici bir renk */
+    text-transform: uppercase; /* Harfleri büyük yapmak */
+    letter-spacing: 2px; /* Harfler arası mesafeyi artırıyoruz */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.5); /* Başlığın etrafına gölge ekliyoruz */
+    font-family: 'Arial', sans-serif; /* Modern bir font ailesi */
+    background: linear-gradient(135deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+  padding-left: 10px;
+}
+.magazine-title::after {
+  content: ''; /* İçerik ekliyoruz */
+  position: absolute; /* Mutlak konumlandırma */
+  bottom: -5px; /* Yazının hemen altına yerleştiriyoruz */
+  left: 0; /* Sol taraftan başlatıyoruz */
+  width: 100%; /* Yazının uzunluğu kadar */
+  height: 1px; /* Çizginin yüksekliği */
+  background: linear-gradient(135deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+}
+/* Tarih, Kategori ve Yazar - Sağ Alt */
+.magazine-details {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  color: #f7c300; /* Yaldızlı sarı renk */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Hafif gölge efekti */
+  padding: 10px;
+  text-align: right; 
+}
+.magazine-details p {
+  margin-bottom: 0px; /* Paragraflar arasındaki mesafeyi kısaltıyoruz */
+}
+
+/* 2024 Model Lüks Sedan - Sol Alt */
+.highlighted-car {
+  position: absolute;
+  bottom: 10px; /* Aşağı kaydırıldı */
+  left: 20px;
+  text-align: left;
+  padding: 20px;
+  color: #f7c300;
+  border-radius: 5px; /* Kenarları yuvarlama */
+}
+
+.highlighted-car-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Daha yoğun gölge efekti */
+  font-family: 'Arial', sans-serif; /* Modern bir font ailesi */
+    background: linear-gradient(360deg, rgb(255, 255, 255), gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    margin-bottom: 0px;
+}
+
+.highlighted-car-description {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Daha belirgin gölge efekti */
+  margin-top: 10px;
+}
+
+.magazine-logo {
+  margin-top: 0px;
+  max-width: 80%; /* Logonun boyutunu sınırlayın */
+  max-height: 120px; /* Maksimum yüksekliği belirleyin */
+  margin-bottom: 0;
+  align-self: center; /* Logoyu yatay ortalar */
+}
+.highlighted-car-image {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover; /* Resimlerin düzgün görünmesi için */
+}
+.next-car-button {
+  margin-top: 0px; /* Başlık ile buton arasına boşluk ekleyin */
+  margin-bottom: 0px;
+  padding: 8px 17px; /* Butonun içindeki metni rahatça yerleştirmek için padding */
+  background: linear-gradient(45deg, black, gold); /* Bakır ve siyah karışımı renk geçişi ekliyoruz */
+  border: none; /* Kenar çizgisini kaldırıyoruz */
+  border-radius: 5px; /* Butonun köşelerini yuvarlıyoruz */
+  font-size: 1.1rem; /* Buton metnini büyütüyoruz */
+  font-weight: bold; /* Buton metnini kalın yapıyoruz */
+  cursor: pointer; /* Butona tıklandığında fareyi tıklanabilir hale getiriyoruz */
+  text-transform: uppercase; /* Buton metnini büyük harf yapıyoruz */
+  transition: background-color 0.3s ease; /* Butona hover efekti eklemek için */
+}
+
+.next-car-button:hover {
+  background-color: #b87333; /* Butonun hover rengini bakır yapalım */
+}

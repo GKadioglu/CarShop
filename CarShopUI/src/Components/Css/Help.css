@@ -1,0 +1,82 @@
+.helppage-container {
+    padding: 20px;
+    background-color: rgba(2, 2, 2, 0.45); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+  }
+  
+  .helppage-title {
+    margin-top: 0px;
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .helppage-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  .helppage-faq, .helppage-guides, .helppage-contact, .helppage-feedback {
+    margin-bottom: 20px;
+  }
+  
+  .helppage-faq-title, .helppage-guides-title, .helppage-contact-title, .helppage-feedback-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+    margin-bottom: 15px;
+   
+  }
+  
+  .helppage-faq-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    color: rgb(197, 188, 157);
+    border: 2px solid transparent; /* Kenarlık için şeffaf bir temel belirliyoruz */
+    border-image-slice: 1;
+    background-color: rgba(2, 2, 2, 0.45); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+  }
+  
+  .helppage-faq-item strong {
+    font-weight: bold;
+  }
+  
+  .helppage-contact-list, .helppage-guides-list {
+    list-style-type: none;
+    padding: 0;
+    color: white;
+    background-color: rgba(2, 2, 2, 0.45); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+  }
+  .helppage-guides-list-li 
+  {
+    color: rgb(181, 158, 28);
+    padding: 5px;
+  }
+  .helppage-contact-list li, .helppage-guides-list li {
+    margin-bottom: 10px;
+
+  }
+  
+  .helppage-feedback-button {
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .helppage-feedback-button:hover {
+    background-color: orange;
+  }

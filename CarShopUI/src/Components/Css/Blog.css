@@ -1,0 +1,108 @@
+.blog-container {
+    width: 90%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .blog-header {
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 5px;
+  }
+  
+  .blog-title {
+    font-size: 2rem;
+  }
+  
+  .blog-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .blog-sidebar {
+    margin-top: 0px;
+    width: 20%;
+    color:white;
+    border: 1px solid gold;
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .blog-sidebar-title {
+    text-align: left;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .blog-categories li, .blog-popular-list li {
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .blog-categories li:hover, .blog-popular-list li:hover {
+    text-decoration: underline;
+  }
+  
+  .blog-main {
+    width: 60%;
+  }
+  
+  .blog-post {
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */    padding: 15px;
+    border: 1px solid gold;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .blog-post-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .blog-post-text {
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .blog-read-more {
+    background: gold;
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .blog-read-more:hover {
+    background: orange;
+  }
+
+  .blog-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .blog-pagination button {
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 2px solid black;
+  }
+  
+  .blog-pagination button.active {
+    background-color: gold;
+    color: black;
+  }
+  
+  .blog-pagination   button:hover {
+    background-color: orange;
+  }
+  .blog.pagination button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }

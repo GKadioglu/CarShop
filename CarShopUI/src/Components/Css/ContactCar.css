@@ -1,0 +1,186 @@
+.contact-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative; /* Arka planın gölgelenmesi için */
+  padding: 0;
+}
+
+.contact-page-content {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 30px;
+  border-radius: 8px;
+  background-color: rgba(2, 2, 2, 0.50); /* Hafif karartma */
+  border: 1px solid rgba(0, 0, 0, 0.3); /* Hafif çerçeve */
+  padding: 20px;
+  position: relative;
+  z-index: 1; /* Diğer öğelerin üzerinde olmasını sağlamak için */
+}
+
+/* Gölgelenmiş arka plan için */
+.contact-page-container.fullscreen-background {
+  background-color: rgba(0, 0, 0, 0.6); /* Hafif kararma */
+}
+.car-info-card {
+  flex: 1;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  
+}
+.car-contact-image-container {
+  position: relative;
+}
+.car-contact-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: all 0.3s ease; /* Yumuşak geçiş */
+  border: 2px solid transparent; /* Kenarlık için şeffaf bir temel belirliyoruz */
+    border-image: linear-gradient(to right, black 50%, orange 50%); /* Çerçevenin sol yarısı siyah, sağ yarısı sarı */
+    border-image-slice: 1; /* Çerçeve hatlarının düzgün görünmesini sağlıyoruz */
+}
+
+/* Tam ekran modunda resmin boyutu ve beyaz çerçeve */
+.fullscreen .car-contact-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* En boy oranını koruyarak içeriyi sığdırır */
+  border: 4px solid transparent; /* Kenarlık için şeffaf bir temel belirliyoruz */
+  border-image: linear-gradient(to right, black 50%, orange 50%); /* Çerçevenin sol yarısı siyah, sağ yarısı sarı */
+  border-image-slice: 1; /* Çerçeve hatlarının düzgün görünmesini sağlıyoruz */}
+.zoom-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border: none;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.228);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  color: gold;
+  z-index: 2; /* Üstte görünmesini sağlamak */
+}
+
+.close-fullscreen {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.228);
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  color: gold;
+
+}
+
+.fullscreen .car-contact-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.car-details h1 {
+  margin: 10px 0;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.car-details h2 {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 8px;
+
+}
+.car-price {
+  margin-top: 0;
+  border-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.car-models, .car-categories {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.car-models li, .car-categories li {
+  font-size: 16px;
+  background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+}
+
+.contact-form {
+  flex: 1;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding-top: 5px;
+}
+
+.contact-form h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+  background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+}
+
+.form-group {
+  margin-top: 1px;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 2px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: none;
+}
+
+.submit-btn {
+  margin-top: 5px;
+  width: 100%;
+  padding: 12px;
+  background-color: gold;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: gold;
+}
+
+.form-status {
+  margin-top: 15px;
+  font-size: 14px;
+  color: gold;
+}

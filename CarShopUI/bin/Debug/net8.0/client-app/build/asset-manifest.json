@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7c34d82d.css",
+    "main.js": "/static/js/main.51c98814.js",
+    "static/js/453.a5059bd1.chunk.js": "/static/js/453.a5059bd1.chunk.js",
+    "static/media/car-4419081.jpg": "/static/media/car-4419081.e4f67e474a7997003e4a.jpg",
+    "static/media/underground-2618567.jpg": "/static/media/underground-2618567.a598640145001fe349ae.jpg",
+    "static/media/gallery6.jpg": "/static/media/gallery6.42f527940be540d48e96.jpg",
+    "static/media/gallery3.jpg": "/static/media/gallery3.d620dac1c5a2e90be21b.jpg",
+    "static/media/moto-7182384.jpg": "/static/media/moto-7182384.0bf1bfde62b983d4f37a.jpg",
+    "static/media/gallery5.jpg": "/static/media/gallery5.cd5a77e808cdeb4596cf.jpg",
+    "static/media/setting2.png": "/static/media/setting2.14681b997d372ba2080e.png",
+    "static/media/gallery2.jpg": "/static/media/gallery2.7d771b742fd51b72aa31.jpg",
+    "static/media/gallery4.jpg": "/static/media/gallery4.a4294e69f5e716828bb5.jpg",
+    "static/media/warehouse-2696005_1920.jpg": "/static/media/warehouse-2696005_1920.b04ddf5f5d9fae021d3e.jpg",
+    "static/media/adminPanel1.jpg": "/static/media/adminPanel1.c25f831cdb3ab73e4fa9.jpg",
+    "static/media/gallery1.jpg": "/static/media/gallery1.2956683fa2945dd52caa.jpg",
+    "static/media/adminPanel3.png": "/static/media/adminPanel3.a7303fd833fe80955b0c.png",
+    "static/media/navbar-background2.jpg": "/static/media/navbar-background2.331712d355c52b97ba1f.jpg",
+    "static/media/adminPanel4.jpg": "/static/media/adminPanel4.d739cc81b4d2a468d4e2.jpg",
+    "static/media/setting3.png": "/static/media/setting3.c882e6133050b5bfed77.png",
+    "static/media/setting4.png": "/static/media/setting4.78a27ca342c1f7787a24.png",
+    "static/media/car shop (2)-Photoroom.png": "/static/media/car shop (2)-Photoroom.5769c67573b8430bc3f3.png",
+    "static/media/setting5.jpg": "/static/media/setting5.fe343c9b59a13abfa2a0.jpg",
+    "static/media/profile.png": "/static/media/profile.75b594b9d1d97f3070ce.png",
+    "static/media/setting6.jpg": "/static/media/setting6.cc2816b2251ce6d79450.jpg",
+    "static/media/setting1.jpg": "/static/media/setting1.e6d1ce6c8336a3e0a6c7.jpg",
+    "index.html": "/index.html",
+    "main.7c34d82d.css.map": "/static/css/main.7c34d82d.css.map",
+    "main.51c98814.js.map": "/static/js/main.51c98814.js.map",
+    "453.a5059bd1.chunk.js.map": "/static/js/453.a5059bd1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c34d82d.css",
+    "static/js/main.51c98814.js"
+  ]
+}

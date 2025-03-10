@@ -1,0 +1,232 @@
+/* Genel Container */
+.category-details-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Sol Alan */
+  .category-details-left {
+    width: 30%; /* Sol tarafın genişliği */
+    padding: 30px;
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 2px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+  }
+  
+  .category-left-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif; /* Modern bir font ailesi */
+    background: linear-gradient(135deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+  }
+  .category-subtitle{
+    font-family: 'Arial', sans-serif; /* Modern bir font ailesi */
+    background: linear-gradient(135deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+  }
+
+  .category-left-description {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+  }
+  
+  /* Sağ Alan (Araç Kartları) */
+  .category-details-right {
+    width: 60%; /* Sağ taraf daha geniş */
+    padding: 15px;
+  }
+  
+  .category-details-title {
+    margin-top: 0;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+    font-family: 'Arial', sans-serif; /* Modern bir font ailesi */
+    background: linear-gradient(135deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+  }
+  
+  /* Araç Kartları (Liste) */
+  .car-detail-slist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  /* Araç Kartı */
+  .car-details-card {
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    transition: transform 0.3s ease;
+    border: 6px solid transparent; /* Kenarlık için şeffaf bir temel belirliyoruz */
+    border-image: linear-gradient(to right, black 50%, orange 50%); /* Çerçevenin sol yarısı siyah, sağ yarısı sarı */
+    border-image-slice: 1; /* Çerçeve hatlarının düzgün görünmesini sağlıyoruz */
+  }
+  
+  .car-details-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Araç Resmi */
+  .car-details-image-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .car-details-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .car-details-card:hover .car-details-image {
+    transform: scale(1.1);
+  }
+  
+  /* Araç Bilgileri */
+  .car-details-info {
+    padding: 10px;
+    text-align: center;
+    background-image: url('../Images/warehouse-2696005_1920.jpg');
+  }
+  
+  .car-details-title {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .car-details-year,
+  .car-details-price {
+    font-size: 1rem;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  .car-details-year {
+    font-weight: bold;
+  }
+  
+  .car-details-price {
+    font-size: 16px;
+    color: gold;
+    margin: 0;
+  }
+  .price {
+    font-weight: bold;
+    color: gold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.btn-category-details-incele {
+    position: absolute;
+    bottom: 0;
+    right: 10px; /* Sağ tarafta hizalamak için */
+    transform: translateY(-50%); /* Dikeyde tam ortalamak için */
+    height: 30px; /* Buton yüksekliği */
+    padding: 5px 15px; /* Buton içindeki yazıya göre genişlik ayarı */
+    background-color: gold;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-category-details-incele:hover {
+    background-color: #e65c00; /* Hover durumunda renk değişimi */
+  }
+  
+  .btn-category-details-incele:focus {
+    outline: none; /* Buton odaklandığında etrafındaki kenarlığı kaldırıyoruz */
+  }
+  .category-feedback-form {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+  }
+  
+  .form-title {
+    margin-top: 0;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+  }
+  
+  .feedback-form .form-group {
+    margin-bottom: 10px;
+    
+  }
+  
+  .feedback-form label {
+    display: block;
+    font-size: 16px;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */  }
+  
+  .feedback-form input,
+  .feedback-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 0,1px solid gold;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: black
+  }
+  
+  .feedback-form input:focus,
+.feedback-form textarea:focus {
+  border: 1px solid  #FFD700;  /* Sarımsı bir renk (altın) kullanıldı */
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);  /* Hafif siyah bir gölge ekledik */
+  outline: none;
+  background-color: black;
+  color: white;
+}
+  
+  .feedback-form textarea {
+    resize: vertical;
+    min-height: 50px;
+  }
+  
+  .btn-submit {
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .btn-submit:hover {
+    background-color: #e65c00; /* Hover durumunda renk değişimi */
+  }

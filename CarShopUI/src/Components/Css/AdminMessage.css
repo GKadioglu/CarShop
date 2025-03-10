@@ -1,0 +1,223 @@
+/* Admin Mesaj Container'ı */
+.body-message {
+  padding-bottom: 20px;
+}
+
+.admin-message-container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  gap: 20px; /* Mesajlar arasında boşluk */
+  margin-bottom: 20px; /* Alt boşluk */
+}
+
+/* Başlık için stil */
+.admin-message-panel-title {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 2.1rem;
+  width: 100%; /* Başlığın tüm genişlikte olması */
+}
+
+/* Mesaj Listesi */
+.admin-message-list {
+  margin-top: 50px;
+  background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 64vh; /* Yüksekliği ekranın %80'i ile sınırlayın */
+  overflow-y: auto; /* Dikey kaydırma çubuğunu etkinleştirin */
+  scrollbar-width: thin; /* Tarayıcı uyumlu ince kaydırma çubuğu */
+  scrollbar-color: #666 rgba(0, 0, 0, 0.3); /* Kaydırma çubuğu rengi */
+}
+
+/* Kaydırıcı düzenlemeleri */
+.admin-message-list::-webkit-scrollbar {
+  width: 8px; /* Kaydırma çubuğunun genişliği */
+}
+
+.admin-message-list::-webkit-scrollbar-thumb {
+  background: #666; /* Kaydırma çubuğunun rengi */
+  border-radius: 4px; /* Yuvarlatılmış köşeler */
+}
+
+.admin-message-list::-webkit-scrollbar-thumb:hover {
+  background: #444; /* Hover durumunda daha koyu bir renk */
+}
+
+/* Mesaj öğeleri */
+.admin-message-item {
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-message-item:hover {
+  background: gold;
+}
+
+.admin-message-header h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+}
+
+/* Detay mesaj alanı */
+.admin-message-detail {
+  display: flex;
+  text-align: center;
+  margin-top: 50px;
+  flex: 2;
+  background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 80vh;
+  overflow-y: auto;
+  width: 100%; /* Mesaj detaylarının tam genişlikte olması */
+}
+
+/* Araç detayı */
+.admin-message-car {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-message-car-img {
+  margin-left: 0px;
+  object-fit: cover;
+  max-width: 320px;
+  border-radius: 10px;
+  height: 67%;  
+}
+
+.admin-message-car-details {
+  font-size: 0.9rem;
+  background-image: url('../Images/warehouse-2696005_1920.jpg');
+  color: #333;
+  border: 4px solid transparent; /* Kenarlık için şeffaf bir temel belirliyoruz */
+  border-image: linear-gradient(to right, black 50%, orange 50%); /* Çerçevenin sol yarısı siyah, sağ yarısı sarı */
+  border-image-slice: 1; /* Çerçeve hatlarının düzgün görünmesini sağlıyoruz */
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+/* Mesaj içeriği */
+.admin-message-content {
+  margin-top: 60px;
+  flex: 2;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.admin-message-content h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 0px;
+}
+
+
+.admin-message-reply:hover {
+  background-color: orange;
+}
+
+/* Yanıtla alanı */
+.admin-message-reply-container {
+  width: 80%; /* veya istediğiniz genişlik */
+  padding: 20px;
+  margin: 0 auto; /* Sayfanın ortasında yer alır */
+  background-color: rgba(2, 2, 2, 0.62);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 975px; /* Yanıt alanı için max genişlik */
+  bottom: 200px;
+  margin-top: 0px;
+}
+
+/* Başlık stilini ayarlıyoruz */
+.admin-message-reply-container-h2 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+/* Gönderen ve Alıcı inputları için Flex düzeni */
+.admin-message-input-group {
+  display: flex;
+  gap: 10px; /* Aralarındaki boşluk */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%; /* Flex container'ın genişliği %100 olacak */
+}
+
+/* Gönderen ve Alıcı inputları için etiketler */
+.admin-message-input-group-label {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 5px; /* Etiketi inputlardan biraz ayırıyoruz */
+  display: block; /* Etiketi bir blok element gibi kullanacağız */
+}
+
+/* Gönderen ve Alıcı inputları stilini ayarlıyoruz */
+.admin-message-input-group input {
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 48%; /* Gönderen ve Alıcı inputları her biri %48 genişliğinde */
+  margin-top: 5px; /* Etiketten biraz boşluk bırakıyoruz */
+}
+
+/* Mesaj alanı stilini ayarlıyoruz */
+.admin-message-reply-container textarea {
+  font-size: 1.1rem;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  width: 100%; /* Tüm genişliği kapsar */
+  height: 80px; /* Mesaj alanı daha geniş ve uzun */
+}
+.admin-message-textarea-label {
+  color: white;
+}
+
+/* Gönderme butonunun stilini ayarlıyoruz */
+.admin-message-submit {
+  background-color: gold;
+  color: black;
+  margin-left: 230px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 1rem;
+  align-items: center;
+  width: 500px;
+}
+
+.admin-message-submit:hover {
+  background-color: orange;
+}
+
+/* Genel Yükleniyor, Hata ve Boş mesaj alanları */
+.admin-message-loading,
+.admin-message-error,
+.admin-message-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+}
+.admin-message-replied-tag {
+  color: white;
+ 
+}

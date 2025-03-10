@@ -1,0 +1,119 @@
+/* Genel Footer */
+.footer {
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Kart Konteyner */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 20px 50px;
+  gap: 20px; /* Kartlar arasındaki boşluk */
+}
+
+/* Kart Yapısı */
+.footer-card {
+  flex: 1 1 calc(20% - 20px); /* 5 sütun düzeni */
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+  border: 0.5px solid rgba(255, 215, 0, 0.5); /* Yaldızlı kenar */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Efekti */
+.footer-card:hover {
+  transform: translateY(-5px); /* Hafif yükselme */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Başlık */
+.footer-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #ffcc00; /* Yaldızlı başlık rengi */
+}
+
+/* Liste */
+.footer-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-card ul li {
+  margin-bottom: 8px;
+}
+
+.footer-card ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-card ul li a:hover {
+  color: #ffcc00; /* Hover rengi */
+}
+
+/* Sosyal Medya */
+.social-media a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-media a:hover {
+  color: #ffcc00;
+}
+
+/* Alt Bilgi */
+.footer-bottom {
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+}
+
+/* Mobil uyumluluk için */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .footer-card {
+    flex: 1 1 100%; /* Kartları tam genişlik yap */
+    margin-bottom: 10px; /* Kartlar arasına boşluk ekleyelim */
+  }
+}
+
+/* Tablet uyumluluğu için */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-wrap: wrap; /* Kartların yan yana gelmesi */
+    justify-content: center;
+  }
+
+  .footer-card {
+    flex: 1 1 calc(50% - 20px); /* İki sütun düzeni */
+  }
+}
+
+/* Küçük ekranlarda yazı boyutunu küçültmek */
+@media (max-width: 480px) {
+  .footer-title {
+    font-size: 16px;
+  }
+
+  .footer-card ul li a {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,84 @@
+.account-settingspage {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .account-settingspage-h2 {
+    margin-top: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+    font-size: 1.9rem;
+  }
+  
+  .account-settingspage-user-details {
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .account-settingspage-user-detail-item {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: white;
+  }
+  
+  .account-settingspage-user-detail-item strong {
+    font-weight: bold;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+  }
+  .account-settingspage-user-detail-button-left {
+    margin-left: 10px;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    padding: 5px 15px; /* Yatayda daha fazla boşluk ekleyerek butonları eşit yaparız */
+    display: inline-flex;
+    justify-content: center;
+    height: 40px; /* Butonların yüksekliğini eşitle */
+    font-size: 14px; /* Yazı boyutunu eşitle */
+  }
+  .account-settingspage-user-detail-button-right {
+    margin-left: 10px;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    padding: 5px 15px; /* Yatayda daha fazla boşluk ekleyerek butonları eşit yaparız */
+    display: inline-flex;
+    justify-content: center;
+    height: 41px; /* Butonların yüksekliğini eşitle */
+    font-size: 14px; /* Yazı boyutunu eşitle */
+  }
+  .account-settingspage-user-detail-button-left {
+    background-color: yellow;
+    color: black;
+  }
+  
+  .account-settingspage-user-detail-button-right {
+    background-color: red;
+    color: black;
+  }
+  
+  .account-settingspage-user-detail-button-right:hover {
+    background-color: crimson; /* Hover durumunda renk değişikliği */
+  }
+  .account-settingspage-user-detail-button-left:hover {
+    background-color: orange; /* Hover durumunda renk değişikliği */
+  }

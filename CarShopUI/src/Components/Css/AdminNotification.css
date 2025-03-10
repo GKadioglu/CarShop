@@ -1,0 +1,61 @@
+.admin-notification-page {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+  
+  .admin-notification-page-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+    padding: 50px;
+  }
+  .admin-notification-page-title {
+    margin-top: 13px;
+    text-align: center;
+    font-size: 27px;
+  }
+  
+  .admin-notification-page-form-div {
+    margin-bottom: 13px;
+  }
+  
+  .admin-notification-page-form-label {
+    font-weight: bold;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+  }
+  
+  .admin-notification-page-form-textarea, .admin-notification-page-form-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .admin-notification-page-form-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: gold;
+    color: black;
+    text-align: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .admin-notification-page-form-button:hover {
+    background-color: orange;
+  }
+  .admin-notification-page-response-message {
+    text-align: center;
+    margin-top: 12px;
+    color: gold;
+    margin-bottom: 0px;
+  }

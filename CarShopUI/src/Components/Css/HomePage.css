@@ -1,0 +1,276 @@
+
+/* Ana sayfa container'ı */
+.home-page {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Başlık stili */
+.title {
+    font-size: 40px; /* Font boyutunu büyütüyoruz */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white; /* Sarı tonlarında dikkat çekici bir renk */
+    text-transform: uppercase; /* Harfleri büyük yapmak */
+    letter-spacing: 2px; /* Harfler arası mesafeyi artırıyoruz */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+    font-family: 'Arial', sans-serif; /* Modern bir font ailesi */
+    background: linear-gradient(135deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    margin-top: 5px;
+
+}
+
+/* Kartların genel stilini ayarlıyoruz */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 25px;
+}
+
+/* Kartın kendisi */
+.card {
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1));
+    position: relative;
+    height: 320px;
+    /* Çerçeve eklemek için border-image kullanıyoruz */
+    border: 6px solid transparent; /* Kenarlık için şeffaf bir temel belirliyoruz */
+    border-image: linear-gradient(to right, black 50%, orange 50%); /* Çerçevenin sol yarısı siyah, sağ yarısı sarı */
+    border-image-slice: 1; /* Çerçeve hatlarının düzgün görünmesini sağlıyoruz */
+}
+
+/* Hover etkisi */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Kartın üst kısmı (resim kısmı) */
+.card-image-wrapper {
+    width: 100%;
+    height: 64%;
+    overflow: hidden;
+}
+
+/* Araç resmi */
+.car-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .car-image {
+    opacity: 0.8; /* Hover efektinde resmin saydamlığı */
+}
+
+/* Kart içeriği */
+.card-content {
+    padding: 15px;
+    background-color: white;
+    height: 40%;
+    position: relative;
+    background-image: url('../Images/warehouse-2696005_1920.jpg');
+}
+
+/* Kart başlığı */
+.card-title {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Fiyat metni */
+.price-text {
+    font-size: 16px;
+    color: gold;
+    margin: 0;
+}
+
+/* Fiyat alanı */
+.price {
+    font-weight: bold;
+    color: gold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.btn-incele {
+    position: absolute;
+    top: 50%; /* Dikeyde tam ortalamak için */
+    right: 10px; /* Sağ tarafta hizalamak için */
+    transform: translateY(-50%); /* Dikeyde tam ortalamak için */
+    height: 30px; /* Buton yüksekliği */
+    padding: 5px 15px; /* Buton içindeki yazıya göre genişlik ayarı */
+    background-color: gold;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Buton üzerine gelindiğinde renk değişimi */
+.btn-incele:hover {
+    background-color: #e67e22;
+}
+
+/* Kartın üst kısmındaki gölge */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    background: rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .homepage-pagination-left {
+    padding: 10px 10px;
+    border: 1px solid transparent; /* Kenarlık için şeffaf bir temel belirliyoruz */
+    border-image: linear-gradient(to right, orange 60%, black 40%); /* Çerçevenin sol yarısı siyah, sağ yarısı sarı */
+    border-image-slice: 1;
+    margin: 0 5px;
+    background-color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    color: gold;
+  }
+  .homepage-pagination-right {
+    padding: 10px 10px;
+    border: 1px solid transparent; /* Kenarlık için şeffaf bir temel belirliyoruz */
+    border-image: linear-gradient(to left, orange 60%, black 40%); /* Çerçevenin sol yarısı siyah, sağ yarısı sarı */
+    border-image-slice: 1;
+    margin: 0 5px;
+    background-color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    color: gold;
+  }
+  
+  .pagination button:hover {
+    background-color:black;
+    color: gold;
+  }
+  
+  .pagination button.active {
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+  } 
+  
+  .pagination button:disabled {
+    cursor: not-allowed;
+    background-color: black;
+  }
+
+  .scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  border: none;
+  background: none; /* İkonun arka planını temizler */
+}
+
+.scroll-to-top-icon {
+  color: gold;
+  font-size: 38px;
+  transition: color 0.6s;
+}
+
+.scroll-to-top:hover .scroll-to-top-icon {
+  color: orange; /* İkonun rengini hover durumunda değiştir */
+}
+
+.scroll-to-top.show {
+  display: block;
+}
+
+
+  /* Favori butonu başlangıç rengi beyaz */
+.favorite-btn {
+    background: none; /* Arka planı kaldır */
+    border: none; /* Sınırları kaldır */
+    position: absolute;
+    right: 10px; /* Fiyatın solunda konumlandırmak için */
+    top: 58%;
+    transform: translateY(-60%);
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 25px; /* İkonun boyutunu büyütebilirsiniz */
+    color: white; /* Başlangıçta beyaz */
+  }
+  
+  /* Favori (dolu) kalp için stil - turuncu renk */
+  .favorite-btn.favorite {
+    color: orange; /* Favoriye eklenince turuncu olacak */
+  }
+  .warning-bubble {
+    position: absolute;
+    top: -60px; /* Kalp ikonunun üstüne konumlandırmak için */
+    left: 20%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: gold;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 10px;
+    display: inline-block;
+    opacity: 1;
+    animation: fadeOut 4s ease-out forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  /* Favori butonunun üzerine gelince daha parlak beyaz yapalım */
+  .favorite-btn:hover {
+  }
+  
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  

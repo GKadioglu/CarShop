@@ -1,0 +1,189 @@
+
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .login-form-container {
+    margin-top: 22px;
+    border-radius: 8px;
+    padding: 20px 400px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+  }
+  
+  /* Başlık */
+  .login-heading {
+    margin-top: 0px;
+    font-size: 29px;
+    font-weight: bold;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    margin-bottom: 20px;
+  }
+  
+  /* Hata mesajı */
+  .login-error-message {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  /* Form */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .login-input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto; /* Sol tarafı otomatik yaparak ortalıyoruz */
+    margin-right: auto; /* Sağ tarafı otomatik yaparak ortalıyoruz */
+  }
+  
+  .login-input:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0px 0px 4px rgba(25, 118, 210, 0.5);
+  }
+  
+  /* Giriş butonu */
+  .login-btn {
+    padding: 10px 15px;
+    width: 40%;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    background-color: gold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto; /* Butonu yatayda ortalıyoruz */
+    display: block; /* Ortalamanın doğru çalışması için display block olmalı */
+  }
+  
+  .login-btn:hover {
+    background-color: gold;
+  }
+  
+  /* Ek seçenekler */
+  .login-additional-options {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+  z-index: 10;
+  }
+  
+  .login-link {
+    cursor: pointer;
+    background-color: gold;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.1s ease;
+    position: relative;
+  z-index: 20;
+  
+  }
+  
+  .login-link:hover {
+    color: gold ;
+  }
+  .model-container {
+    margin-top: -100px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .login-success-message {
+    color: gold;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /* Mobil cihazlar (576px ve daha küçük ekranlar için) */
+@media (max-width: 576px) {
+  .login-form-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .login-heading {
+    font-size: 24px;
+  }
+
+  .login-input {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .login-btn {
+    width: 100%;
+  }
+}
+
+/* Tablet cihazlar (577px - 992px arası ekranlar için) */
+@media (max-width: 992px) {
+  .login-form-container {
+    padding: 20px 50px;
+    max-width: 100%;
+  }
+
+  .login-heading {
+    font-size: 26px;
+  }
+
+  .login-input {
+    font-size: 15px;
+    padding: 9px 14px;
+  }
+
+  .login-btn {
+    width: 60%;
+  }
+}
+
+/* Büyük ekranlar (993px ve üzeri için) */
+@media (min-width: 993px) {
+  .login-form-container {
+    padding: 20px 400px;
+  }
+
+  .login-btn {
+    width: 40%;
+  }
+}

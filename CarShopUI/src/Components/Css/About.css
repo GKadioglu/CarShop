@@ -1,0 +1,130 @@
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-left {
+    flex: 1 1 50%; /* Sol taraf genişlik */
+    margin-right: 20px;
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+  }
+  
+  .about-right {
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+    flex: 1 1 50%; /* Sağ taraf genişlik */
+  }
+  
+  .about-section {
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  
+  h1, h2 {
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+  }
+  
+  .contact-section {
+    margin-bottom: 10px;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .gallery img {
+    width: 32%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+  
+  .address {
+    margin-left: 10px;
+    border-radius: 8px;
+  }
+  
+  .address h3 {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+  }
+  
+  .address p {
+    margin-top: 0px;
+    font-size: 1rem;
+    color: white;
+  }
+  
+/* Mobil cihazlar için */
+@media (max-width: 576px) {
+  .about-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .gallery {
+    flex-direction: column;
+  }
+}
+/* Tabletler için */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .about-left, .about-right {
+    flex: 1 1 100%;
+    margin-right: 0;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
+}

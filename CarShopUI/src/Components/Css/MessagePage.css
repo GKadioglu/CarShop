@@ -1,0 +1,196 @@
+/* Genel sayfa düzeni */
+.account-messagepage-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */ 
+  }
+  
+  .account-messagepage-title {
+    text-align: center;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+    margin-bottom: 20px;
+  }
+  .account-messagepage-sender {
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+  }
+  
+  /* Mesaj kartı */
+  .account-message-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .account-messagepage-message-title {
+    margin-top: 8px;
+    font-size: 15px;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .account-messagepage-message-answer {
+    text-align: center;
+    margin-top: 0px;
+  }
+  .account-message-sender,
+  .account-message-receiver {
+    font-weight: bold;
+    color: #555;
+  }
+  .account-messagepage-message {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, black 50%, orange 50%);
+    border-image-slice: 1;
+    padding: 5px; 
+
+  }
+
+  .account-message-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+  }
+  .account-messagepage-receiver {
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+  }
+  
+  /* Önceki / Sonraki Butonlar */
+  .account-messagepage-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  
+  .account-messagepage-button-left {
+    background-color: gold;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  .account-messagepage-button-right {
+    background-color: gold;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 50px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  .account-messagepage-button-delete {
+    background-color: red;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 50px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .account-messagepage-button-left:hover,.account-messagepage-button-right:hover {
+    background-color: orange;
+  }
+  .account-messagepage-button-delete:hover {
+    background-color: rgba(201, 30, 30, 0.801);
+  }
+  
+  /* Alıntılanan mesaj */
+  .account-messagepage-quoted-user
+  {
+    margin-top: 20px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, black 50%, orange 50%);
+    border-image-slice: 1;
+    padding: 5px;
+  }
+  .account-messagepage-quoted-title {
+    text-align: center;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+  }
+ .account-messagepage-quoted-sender {
+  margin-right: 5px;
+ }
+  .account-messagepage-quoted-button {
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: gold;
+    border-radius: 10px;
+    padding: 3px;
+  }
+  .account-messagepage-quoted-button:hover {
+    background-color: orange;
+  }
+  .quoted-message-user {
+    margin-top: 15px;
+    padding: 10px;
+    background: #eef1f5;
+    border-left: 4px solid #007bff;
+  }
+  
+  .quoted-message-card-user {
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quoted-message-card-user-button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .quoted-message-card-user-button:hover {
+    background: #218838;
+  }
+  
+  /* Araç bilgileri ve resmi */
+  .accountpage-message-car {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+  }
+  
+  .accountpage-message-car-img {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  .accountpage-message-car-info {
+    font-size: 14px;
+    color: #444;
+  }
+  

@@ -1,0 +1,174 @@
+.favorite-car-panel {
+    padding: 20px;
+    border-radius: 8px;
+  
+  }
+  
+  .favorite-car-panel-h3 {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 30px;
+    background: linear-gradient(150deg, white, gold); /* Başlığa renk geçişi ekliyoruz */
+    -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
+    color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */
+    text-shadow: 15px 13px 15px rgba(0, 0, 0, 0.906); /* Başlığın etrafına gölge ekliyoruz */
+  }
+  
+  .favorite-car-panel-list {
+    margin-top: 0px;
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .favorite-car-panel-btn-prev,
+  .favorite-car-panel-btn-next {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .favorite-car-panel-btn-prev:hover,
+  .favorite-car-panel-btn-next:hover {
+    background-color: #e6b800;
+  }
+  
+  .favorite-car-panel-card {
+    border: 4px solid transparent;
+    border-image: linear-gradient(to right, black 50%, orange 50%);
+    border-image-slice: 1;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .favorite-car-panel-image {
+    width: 300px;
+    height: 180px;
+    border-radius: 4px;
+    object-fit: cover;
+    margin: 0;
+  }
+  
+  .favorite-car-panel-details {
+    margin-top: 0px;
+  }
+  
+  .favorite-car-panel-price {
+    font-weight: bold;
+    color: gold;
+  }
+  
+  .favorite-car-panel-btn-incele {
+    background-color: gold;
+    margin-bottom: 10px;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .favorite-car-panel-btn-incele:hover {
+    background-color: orange;
+  }
+  .favorite-car-panel-btn-cikar {
+    background-color: red;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  .favorite-car-panel-btn-cikar:hover {
+    background-color:crimson
+  }
+
+
+/* Responsive Tasarım */
+@media (max-width: 1200px) {
+  .favorite-car-panel-list {
+      gap: 20px;
+  }
+  .favorite-car-panel-image {
+      width: 250px;
+      height: 150px;
+  }
+}
+
+@media (max-width: 992px) {
+  .favorite-car-panel-list {
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+  .favorite-car-panel-card {
+      width: 45%;
+      margin-bottom: 20px;
+  }
+  .favorite-car-panel-btn-prev,
+  .favorite-car-panel-btn-next {
+      padding: 8px;
+  }
+  .favorite-car-panel-image {
+      width: 200px;
+      height: 120px;
+  }
+  .favorite-car-panel-h3 {
+      font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .favorite-car-panel {
+      padding: 15px;
+  }
+  .favorite-car-panel-list {
+      gap: 15px;
+  }
+  .favorite-car-panel-card {
+      width: 90%;
+      margin-bottom: 20px;
+  }
+  .favorite-car-panel-btn-prev,
+  .favorite-car-panel-btn-next {
+      padding: 6px;
+  }
+  .favorite-car-panel-h3 {
+      font-size: 22px;
+  }
+  .favorite-car-panel-btn-incele,
+  .favorite-car-panel-btn-cikar {
+      padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorite-car-panel-h3 {
+      font-size: 18px;
+  }
+  .favorite-car-panel-list {
+      padding: 10px;
+  }
+  .favorite-car-panel-btn-prev,
+  .favorite-car-panel-btn-next,
+  .favorite-car-panel-btn-incele,
+  .favorite-car-panel-btn-cikar {
+      padding: 5px;
+  }
+  .favorite-car-panel-card {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+  .favorite-car-panel-image {
+      width: 100%;
+      height: 200px;
+  }
+}

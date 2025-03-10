@@ -1,0 +1,17 @@
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\bin\Debug\net8.0\CarShop.Entity.deps.json
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\bin\Debug\net8.0\CarShop.Entity.runtimeconfig.json
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\bin\Debug\net8.0\CarShop.Entity.dll
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\bin\Debug\net8.0\CarShop.Entity.pdb
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\bin\Debug\net8.0\Core.dll
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\bin\Debug\net8.0\Core.pdb
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\CarShop.Entity.csproj.AssemblyReference.cache
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\CarShop.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\CarShop.Entity.AssemblyInfoInputs.cache
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\CarShop.Entity.AssemblyInfo.cs
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\CarShop.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\CarShop..17ECB96C.Up2Date
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\CarShop.Entity.dll
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\refint\CarShop.Entity.dll
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\CarShop.Entity.pdb
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\CarShop.Entity.genruntimeconfig.cache
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\ref\CarShop.Entity.dll
