@@ -32,7 +32,7 @@ namespace CarShop.API.Controllers
                 {
                     var categoryModel = new CategoryListModel
                     {
-                        Categories = result.Data // Başarılıysa Data'yı ata
+                        Categories = result.Data 
                     };
                     return Ok(categoryModel);
                 }

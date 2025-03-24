@@ -27,16 +27,13 @@ namespace CarShop.Business.Concrete
 
         public async Task<List<CarDetailModel>> GetFavoriteCars(string userName)
         {
-            // Favori araçları al
             var favoriteCars = await _unitOfWork.FavoriteCars.GetFavoriteCars(userName);
 
-            // Eğer favori araç yoksa boş bir liste döndür
             if (favoriteCars == null || !favoriteCars.Any())
             {
                 return new List<CarDetailModel>();
             }
 
-            // Favori araçları 'CarDetailModel' formatında döndür
             var carDetailModels = favoriteCars.Select(car => new CarDetailModel
             {
                 CarId = car.CarId,
@@ -48,21 +45,21 @@ namespace CarShop.Business.Concrete
                 Models = car.CarModels?.Select(model => new CarModelDetail
                 {
                     ModelId = model.ModelId,
-                    Name = model.Model?.Name, // Null kontrolü
+                    Name = model.Model?.Name, 
                     Origin = model.Model?.Origin,
                     EstablishmentYear = model.Model.EstablishmentYear,
                     Founder = model.Model?.Founder
-                }).ToList() ?? new List<CarModelDetail>(), // Null durumda boş liste
+                }).ToList() ?? new List<CarModelDetail>(), 
                 Categories = car.CarCategories?.Select(category => new CarCategoryModelDetail
                 {
                     CategoryId = category.CategoryId,
-                    Name = category.Category?.Name // Null kontrolü
-                }).ToList() ?? new List<CarCategoryModelDetail>(), // Null durumda boş liste
+                    Name = category.Category?.Name 
+                }).ToList() ?? new List<CarCategoryModelDetail>(), 
                 CarFavoriteModels = car.FavoriteCarCars?.Select(fc => new CarFavoriteModel
                 {
-                    FavoriteId = fc.FavoriteId, // Burada FavoriteId'yi ilişki tablosundan alıyoruz
-                    UserName = userName // Favori aracın UserName'ini ekliyoruz
-                }).ToList() ?? new List<CarFavoriteModel>() // Null durumda boş liste
+                    FavoriteId = fc.FavoriteId, 
+                    UserName = userName 
+                }).ToList() ?? new List<CarFavoriteModel>() 
             }).ToList();
 
             return carDetailModels;

@@ -78,11 +78,9 @@ namespace CarShop.Business.Concrete
 
             if (cars != null && cars.Any())
             {
-                // Veriler başarılı bir şekilde alındıysa SuccessDataResult döndürülür.
                 return new SuccessDataResult<List<Car>>(cars, CarMessages.CarFound);
             }
 
-            // Eğer veriler bulunamazsa, ErrorDataResult döndürülür.
             return new ErrorDataResult<List<Car>>(CarMessages.CarNotFound);
         }
 
@@ -106,7 +104,6 @@ namespace CarShop.Business.Concrete
                 return new SuccessDataResult<List<Car>>(cars, CarMessages.CarFound);
             }
 
-            // Eğer veriler bulunamazsa, ErrorDataResult döndürülür.
             return new ErrorDataResult<List<Car>>(CarMessages.CarNotFound);
         }
 

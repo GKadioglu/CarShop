@@ -24,7 +24,6 @@ namespace CarShop.Data.Concrete.EfCore
 
         public Notifications1 AddNewNotification(string sender, string title, string description, DateTime createdDate)
         {
-            // Yeni bir Notification nesnesi oluşturuyoruz
             var notification = new Notifications1
             {
                 Sender = sender,
@@ -33,13 +32,10 @@ namespace CarShop.Data.Concrete.EfCore
                 CreatedDate = createdDate
             };
 
-            // ShopContext üzerinden Notifications tablosuna yeni kayıt ekliyoruz
             ShopContext.Notifications1.Add(notification);
 
-            // Veritabanına kaydetme işlemi
             ShopContext.SaveChanges();
 
-            // Oluşturduğumuz notification'ı geri döndürüyoruz
             return notification;
         }
 

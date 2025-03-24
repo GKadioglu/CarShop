@@ -33,7 +33,7 @@ namespace CarShop.Data.Concrete.EfCore
             return ShopContext.UserMakeAnOffers
                 .Include(u => u.MakeAnOfferCars)
                     .ThenInclude(mc => mc.Car)
-                .Include(u => u.AdminMakeAnOfferUserMakeAnOffers) // Admin yanıtlarını ekledik
+                .Include(u => u.AdminMakeAnOfferUserMakeAnOffers) 
                     .ThenInclude(a => a.AdminMakeAnOffer)
                 .ToList();
         }

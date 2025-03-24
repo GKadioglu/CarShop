@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom"; // useNavigate import edin
+import { useNavigate } from "react-router-dom"; 
 import "./Css/Category.css";
 
 const Category = () => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate(); // useNavigate hook'unu kullan
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     fetch("http://localhost:5000/api/category/categories")
@@ -16,7 +16,7 @@ const Category = () => {
         return response.json();
       })
       .then((data) => {
-        setCategories(data.categories); // API'den dönen "categories" key'ine uygun
+        setCategories(data.categories); 
         setLoading(false);
       })
       .catch((error) => {
@@ -29,9 +29,8 @@ const Category = () => {
     return <div>Yükleniyor...</div>;
   }
 
-  // Butona tıklanınca ilgili kategoriye yönlendirme işlemi
   const handleCategoryClick = (categoryName) => {
-    navigate(`/category/${categoryName}`); // Kategori adıyla yönlendirme
+    navigate(`/category/${categoryName}`); 
   };
 
   return (
@@ -48,7 +47,7 @@ const Category = () => {
               />
             </div>
             <button
-              onClick={() => handleCategoryClick(category.name)} // Buton tıklama işlemi
+              onClick={() => handleCategoryClick(category.name)} 
               className="category-name"
             >
               {category.name}

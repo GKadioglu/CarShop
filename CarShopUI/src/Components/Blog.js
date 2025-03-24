@@ -3,43 +3,38 @@ import axios from 'axios';
 import "./Css/Blog.css";
 
 function Blog() {
-  const [news, setNews] = useState([]);  // Haberler verisini tutacağız
-  const [loading, setLoading] = useState(true); // Yükleniyor durumu
-  const [error, setError] = useState(null); // Hata durumu
-  const [currentPage, setCurrentPage] = useState(1); // Geçerli sayfa
-  const [articlesPerPage] = useState(3); // Sayfa başına gösterilecek haber sayısı
-  const [visiblePages, setVisiblePages] = useState([]); // Görünür sayfa numaraları
+  const [news, setNews] = useState([]);  
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
+  const [currentPage, setCurrentPage] = useState(1); 
+  const [articlesPerPage] = useState(3); 
+  const [visiblePages, setVisiblePages] = useState([]); 
 
-  // Sayfa ilk yüklendiğinde API'den haberleri çekiyoruz
   useEffect(() => {
-    axios.get('http://localhost:5000/api/blog/latest-news') // API endpoint'i
+    axios.get('http://localhost:5000/api/blog/latest-news') 
       .then(response => {
-        setNews(response.data.articles); // API yanıtından haberleri alıyoruz
+        setNews(response.data.articles); 
         setLoading(false); // Yükleme işlemi tamamlandı
       })
       .catch(error => {
         setError('Haberler yüklenirken bir hata oluştu');
         setLoading(false);
       }); 
-  }, []); // Boş dizi, sadece ilk renderda çalışmasını sağlar
+  }, []); 
 
-  // Sayfa başına 3 haber göstermek için slice kullanıyoruz
   const indexOfLastArticle = currentPage * articlesPerPage;
   const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
   const currentArticles = news.slice(indexOfFirstArticle, indexOfLastArticle);
 
-  // Sayfa numaralarını hesaplamak
-  const pageCount = Math.ceil(news.length / articlesPerPage); // Toplam sayfa sayısı
-  const pageGroup = Math.ceil(currentPage / 10); // Sayfa grubu
-  const startPage = (pageGroup - 1) * 10 + 1; // Görünür sayfa numarasının başlangıcı
-  const endPage = Math.min(pageGroup * 10, pageCount); // Görünür sayfa numarasının sonu
+  const pageCount = Math.ceil(news.length / articlesPerPage); 
+  const pageGroup = Math.ceil(currentPage / 10); 
+  const startPage = (pageGroup - 1) * 10 + 1; 
+  const endPage = Math.min(pageGroup * 10, pageCount); 
   
-  // Görünür sayfa numaralarını güncelleme
   useEffect(() => {
     setVisiblePages(Array.from({ length: endPage - startPage + 1 }, (_, index) => startPage + index));
   }, [currentPage, pageGroup, pageCount]);
 
-  // Sayfa numarasına tıklama
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   if (loading) {

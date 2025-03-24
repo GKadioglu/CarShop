@@ -13,18 +13,15 @@ namespace CarShop.Data.Configurations
         public void Configure(EntityTypeBuilder<Category> builder)
         {
          
-
-        // Kategori için birincil anahtar
         builder.HasKey(c => c.CategoryId);
 
-        // Kategorinin isminin benzersiz olmasını sağlamak için
         builder.HasIndex(c => c.Name).IsUnique();
 
         // Araçlar ile ilişki (Bire çok ilişki)
         builder.HasMany(c => c.CarCategories)  // Bir Category birden fazla CarCategory'ye sahip olabilir
             .WithOne(cc => cc.Category)  // Her CarCategory bir Category'ye sahiptir
             .HasForeignKey(cc => cc.CategoryId)  // Yabancı anahtar (CategoryId)
-            .OnDelete(DeleteBehavior.Cascade);  // Silme işlemi ile ilişkili CarCategory'lerin de silinmesini sağlar
+            .OnDelete(DeleteBehavior.Cascade);  
            
     
         }

@@ -1,6 +1,6 @@
 import React from "react";
-import image from "../Images/navbar-background2.jpg"; // Arka plan resmi
-import "../Css/Footer.css"; // CSS dosyasını dahil ediyoruz
+import image from "../Images/navbar-background2.jpg"; 
+import "../Css/Footer.css"; 
 
 function Footer() {
   return (

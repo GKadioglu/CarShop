@@ -33,16 +33,13 @@ namespace CarShop.API.Controllers
                 return BadRequest("Geçersiz araç ID.");
             }
 
-            // Servis çağrısı
             var model = _model3DService.GetModel3D(id);
 
-            // Hata durumu kontrolü
             if (model == null)
             {
                 return NotFound("Belirtilen araç için 3D model bulunamadı.");
             }
 
-            // Başarılı durum
             return Ok(model);
         }
 

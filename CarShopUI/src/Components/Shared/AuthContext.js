@@ -19,11 +19,11 @@ export const AuthProvider = ({ children }) => {
     setUserName(userName);
     setRole(role);
     setToken(token);
-    setEmail(email); // E-mail'i de set ediyoruz
+    setEmail(email); 
     localStorage.setItem("jwtToken", token);
     localStorage.setItem("role", role);
     localStorage.setItem("userName", userName);
-    localStorage.setItem("email", email); // E-mail'i localStorage'a ekliyoruz
+    localStorage.setItem("email", email); 
   };
 
   const logout = () => {
@@ -31,11 +31,11 @@ export const AuthProvider = ({ children }) => {
     setUserName("");
     setRole("");
     setToken("");
-    setEmail(""); // E-mail'i sıfırlıyoruz
+    setEmail(""); 
     localStorage.removeItem("jwtToken");
     localStorage.removeItem("role");
     localStorage.removeItem("userName");
-    localStorage.removeItem("email"); // E-mail'i de localStorage'dan siliyoruz
+    localStorage.removeItem("email"); 
 
   };
 

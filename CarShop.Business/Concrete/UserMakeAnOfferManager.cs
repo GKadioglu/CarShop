@@ -42,7 +42,7 @@ namespace CarShop.Business.Concrete
                     PhoneNumber = mesaj.PhoneNumber,
                     Offer = mesaj.Offer,
                     MakeAnOfferCars = mesaj.MakeAnOfferCars
-                        .Where(amc => amc.Car != null)  // Car null olmayanları filtrele
+                        .Where(amc => amc.Car != null) 
                         .Select(amc => new MakeAnOfferCars
                         {
                             CarId = amc.CarId,
@@ -52,7 +52,7 @@ namespace CarShop.Business.Concrete
                             Price = amc.Car.Price,
                             ImageUrl = amc.Car.ImageUrl,
                             AdminOffers = mesaj.AdminMakeAnOfferUserMakeAnOffers
-                                .Where(a => a.AdminMakeAnOffer != null) // Null kontrolü
+                                .Where(a => a.AdminMakeAnOffer != null) 
                                 .Select(a => new AdminOffers
                                 {
                                     AdminOfferId = a.AdminMakeAnOffer.AdminOfferId,
@@ -68,7 +68,6 @@ namespace CarShop.Business.Concrete
                 userMakeOfferModels.Add(userMakeOfferModel);
             }
 
-            // Başarılı dönüş
             return new SuccessDataResult<List<UserMakeAnOfferModel>>(userMakeOfferModels, OfferMessages.OfferFound);
         }
 
@@ -90,10 +89,9 @@ namespace CarShop.Business.Concrete
             var savedOffer = _unitofwork.UserMakeAnOffers.NewOffer(fullname, email, phone, offer, carId);
             if (savedOffer == null)
             {
-                return new ErrorDataResult<UserMakeAnOfferModel>(OfferMessages.NotSaveOfferMade); // Teklif kaydedilemedi
+                return new ErrorDataResult<UserMakeAnOfferModel>(OfferMessages.NotSaveOfferMade); // 
             }
 
-            // teklif modelini oluşturuyoruz
             var userMakeModel = new UserMakeAnOfferModel
             {
                 FullName = fullname,
@@ -114,7 +112,6 @@ namespace CarShop.Business.Concrete
         }
             };
 
-            // Başarılı dönüş
             return new SuccessDataResult<UserMakeAnOfferModel>(userMakeModel, OfferMessages.OfferMade);
         }
     }

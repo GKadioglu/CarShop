@@ -22,91 +22,77 @@ namespace CarShop.Data.Concrete.EfCore
 
         public async Task AddFavoriteCar(string userName, int carId)
         {
-            // Kullanıcının mevcut favori aracını kontrol et
             var existingFavorite = await ShopContext.FavoriteCars
-                .FirstOrDefaultAsync(f => f.UserName == userName && f.FavoriteId == carId); // Kullanıcı ve carId'ye göre kontrol et
+                .FirstOrDefaultAsync(f => f.UserName == userName && f.FavoriteId == carId); 
 
-            // Eğer böyle bir favori kaydı yoksa, yeni bir favori kaydı oluştur
             if (existingFavorite == null)
             {
-                // Yeni favori kaydını oluştur
                 existingFavorite = new FavoriteCar
                 {
-                    FavoriteId = carId, // carId'yi FavoriteId olarak ata
+                    FavoriteId = carId, 
                     UserName = userName
                 };
 
-                // Yeni favori kaydını FavoriteCars tablosuna ekle
                 ShopContext.FavoriteCars.Add(existingFavorite);
-                await ShopContext.SaveChangesAsync(); // Kaydet
+                await ShopContext.SaveChangesAsync(); 
 
-                // `FavoriteCarCars` tablosunda bu favori ile ilişkili bir araç var mı diye kontrol et
                 var isAlreadyFavorite = await ShopContext.FavoriteCarCars
                     .AnyAsync(fc => fc.FavoriteId == existingFavorite.FavoriteId && fc.CarId == carId);
 
                 if (!isAlreadyFavorite)
                 {
-                    // Eğer bu ilişki yoksa, favori ilişkisini ekle
                     ShopContext.FavoriteCarCars.Add(new FavoriteCarCar
                     {
                         FavoriteId = existingFavorite.FavoriteId,
                         CarId = carId
                     });
 
-                    await ShopContext.SaveChangesAsync();  // Yeni ilişkiyi kaydet
+                    await ShopContext.SaveChangesAsync();  
                 }
             }
             else
             {
-                // Eğer favori zaten varsa, ilişkiyi kontrol et
                 var isAlreadyFavorite = await ShopContext.FavoriteCarCars
                     .AnyAsync(fc => fc.FavoriteId == existingFavorite.FavoriteId && fc.CarId == carId);
 
                 if (!isAlreadyFavorite)
                 {
-                    // Eğer bu ilişki yoksa, favori ilişkisini ekle
                     ShopContext.FavoriteCarCars.Add(new FavoriteCarCar
                     {
                         FavoriteId = existingFavorite.FavoriteId,
                         CarId = carId
                     });
 
-                    await ShopContext.SaveChangesAsync();  // Yeni ilişkiyi kaydet
+                    await ShopContext.SaveChangesAsync();  
                 }
             }
         }
 
         public async Task<List<Car>> GetFavoriteCars(string userName)
         {
-            // Tek sorgu ile kullanıcıya ait favori araçları getiriyoruz
             var favoriteCars = await ShopContext.FavoriteCarCars
-                .Where(fc => fc.FavoriteCar.UserName == userName) // Favori araçları filtrele
-                .Include(fc => fc.Car) // Car tablosuyla ilişkilendir
-                .Select(fc => fc.Car) // Sadece araç bilgilerini seç
+                .Where(fc => fc.FavoriteCar.UserName == userName) 
+                .Include(fc => fc.Car) 
+                .Select(fc => fc.Car) 
                 .ToListAsync();
 
             return favoriteCars ?? new List<Car>();
         }
         public async Task RemoveFavoriteCar(string userName, int carId)
         {
-            // Kullanıcının favori aracını bul
             var favoriteCar = await ShopContext.FavoriteCars
-                .FirstOrDefaultAsync(f => f.UserName == userName && f.FavoriteId == carId); // Kullanıcı ve carId'ye göre kontrol et
+                .FirstOrDefaultAsync(f => f.UserName == userName && f.FavoriteId == carId); 
 
-            // Eğer favori araç bulunmuşsa
             if (favoriteCar != null)
             {
-                // Favori ilişkisinin FavoriteCarCars tablosunda var olup olmadığını kontrol et
                 var favoriteCarCar = await ShopContext.FavoriteCarCars
                     .FirstOrDefaultAsync(fc => fc.FavoriteId == favoriteCar.FavoriteId && fc.CarId == carId);
 
                 if (favoriteCarCar != null)
                 {
-                    // Favori araç ilişkisini sil
                     ShopContext.FavoriteCarCars.Remove(favoriteCarCar);
                     await ShopContext.SaveChangesAsync();  // İlişkiyi kaydet
 
-                    // Eğer bu favori araç artık hiçbir kullanıcı tarafından favoriye eklenmemişse, FavoriteCars tablosundan da sil
                     var relatedFavoriteCarCount = await ShopContext.FavoriteCarCars
                         .CountAsync(fc => fc.FavoriteId == favoriteCar.FavoriteId);
 
@@ -119,7 +105,6 @@ namespace CarShop.Data.Concrete.EfCore
             }
             else
             {
-                // Eğer böyle bir favori araç yoksa, hata mesajı verebiliriz veya başka bir işlem yapabiliriz
                 throw new Exception("Favori araç bulunamadı.");
             }
         }

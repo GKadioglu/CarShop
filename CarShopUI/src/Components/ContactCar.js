@@ -7,7 +7,7 @@ import { fetchWithToken } from "./Shared/api";
 
 const ContactCar = () => {
   const { carName } = useParams();
-  const { userName, token } = useAuth(); // AuthContext'ten doğru state'leri alıyoruz
+  const { userName, token } = useAuth(); 
   const [car, setCar] = useState(null);
   const [form, setForm] = useState({
     name: "",
@@ -18,12 +18,11 @@ const ContactCar = () => {
   const [formStatus, setFormStatus] = useState("");
   const [isFullScreen, setIsFullScreen] = useState(false);
 
-  // Kullanıcı bilgilerini al
   useEffect(() => {
     if (userName && token) {
       fetchWithToken(
         `http://localhost:5000/api/users/getUser/${userName}`,
-        token // fetchWithToken çağrısına token parametresi eklenmeli
+        token 
       )
         .then((response) => {
           if (!response.ok) throw new Error("Kullanıcı bilgisi alınamadı");
@@ -41,7 +40,6 @@ const ContactCar = () => {
     }
   }, [userName, token]);
 
-  // Araç bilgilerini al
   useEffect(() => {
     fetch(`http://localhost:5000/api/car/contact/${encodeURIComponent(carName)}`)
       .then((response) => {
@@ -49,8 +47,8 @@ const ContactCar = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data); // Yanıtı kontrol et
-        setCar(data.data); // Eğer yanıt "data" içinde ise burayı değiştir
+        console.log(data); 
+        setCar(data.data); 
       })
       .catch((error) => console.error(error.message));
   }, [carName]);

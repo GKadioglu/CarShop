@@ -12,7 +12,6 @@ function MyAccount() {
   const navigate = useNavigate();
   const [acceptedOffersCount, setAcceptedOffersCount] = useState(0);
 
-  // Hooks: En üst seviyede tanımlanmalı
   const [user, setUser] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
@@ -28,7 +27,6 @@ function MyAccount() {
   const [currentMessageIndex, setCurrentMessageIndex] = useState(0);
   const [favoriteCarsNumber, setFavoriteCarsNumber] = useState([]);
 
-  // Kullanıcı verilerini almak için useEffect
   useEffect(() => {
     if (!token) {
       navigate("/login");
@@ -114,7 +112,6 @@ function MyAccount() {
         const data = await response.json();
 
         if (response.ok) {
-          // Filtrele, acceptance true olanları say
           const acceptedOffers = data.data.filter(
             (offer) => offer.acceptance === true
           );
@@ -127,7 +124,6 @@ function MyAccount() {
 
     fetchAdminOffers();
   }, [token, email]);
-  // Favori araçları almak için useEffect
   useEffect(() => {
     if (!token) return;
 
@@ -165,7 +161,6 @@ function MyAccount() {
       });
   }, [token]);
 
-  // Mesajları almak için useEffect
   useEffect(() => {
     if (!token || !email) {
       navigate("/login");
@@ -194,7 +189,6 @@ function MyAccount() {
     fetchAdminMessages();
   }, [token, email, navigate]);
 
-  // Mesajlar arasında geçiş yapmak için
   const handleNextMessage = () => {
     if (messages.length === 0) return;
     const nextIndex = (currentMessageIndex + 1) % messages.length;
@@ -217,46 +211,42 @@ function MyAccount() {
     }
   };
 
-  // Formdaki değişiklikleri yönetmek için
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Formu kaydetmek için
   const handleSave = async () => {
     try {
-      console.log("Gönderilen form verisi:", JSON.stringify(formData)); // Form verisini logla
+      console.log("Gönderilen form verisi:", JSON.stringify(formData)); 
 
       const response = await fetchWithToken(
-        "http://localhost:5000/api/users/userEdit", // API URL'nizi burada belirtin
+        "http://localhost:5000/api/users/userEdit", 
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData), // Form verilerini JSON formatında gönderiyoruz
+          body: JSON.stringify(formData), 
         }
       );
 
-      const data = await response.json(); // Yanıtı JSON'a dönüştür
+      const data = await response.json(); 
 
       if (!response.ok) {
         setError(data.message || "Bilgiler güncellenirken bir hata oluştu.");
       } else {
-        setUser(data.userName); // Kullanıcıyı güncelle
-        setIsEditing(false); // Düzenleme modundan çık
-        window.location.reload(); // Sayfayı yenileyerek güncellenmiş verilerle tekrar yüklenmesini sağla
+        setUser(data.userName); 
+        setIsEditing(false); 
+        window.location.reload(); 
       }
     } catch (err) {
       setError("Sunucu ile bağlantı hatası.");
     }
   };
 
-  // Düzenleme modunu açıp kapatmak için
   const toggleEditMode = () => {
     setIsEditing((prev) => !prev);
   };
 
-  // Error veya loading durumları için conditional render
   if (error) {
     return <div>{error}</div>;
   }
@@ -376,7 +366,6 @@ function MyAccount() {
             <button className="btn-account-next" onClick={handleNext}>
               {">"}
             </button>{" "}
-            {/* Sağ ok */}
           </div>
         </section>
       </div>

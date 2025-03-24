@@ -85,21 +85,18 @@ namespace CarShop.Business.Concrete
 
         public async Task<IDataResult<AdminMessageModel>> AnswerMessageAsync(string sender, string receiver, string message, int messageId)
         {
-            // Kullanıcı mesajını getir
             var anonimMessage = await _unitofwork.AnonimMessages.GetByIdAsync(messageId);
             if (anonimMessage == null)
             {
                 return new ErrorDataResult<AdminMessageModel>(AdminMessages.MessageNotFound);
             }
 
-            // Cevap mesajını kaydet
             var adminMessage = await _unitofwork.AdminMessages.AnswerMessageAsync(sender, receiver, message, messageId);
             if (adminMessage == null)
             {
                 return new ErrorDataResult<AdminMessageModel>(AdminMessages.FailedSendMessage);
             }
 
-            // Geriye dönecek modeli oluştur
             var adminMessageModel = new AdminMessageModel
             {
                 AdminMessageId = adminMessage.AdminMessageId,
@@ -128,7 +125,6 @@ namespace CarShop.Business.Concrete
         }
             };
 
-            // Başarılı dönüş
             return new SuccessDataResult<AdminMessageModel>(adminMessageModel, AdminMessages.SendMessage);
         }
 

@@ -13,6 +13,7 @@
   .category-details-left {
     width: 30%; /* Sol tarafın genişliği */
     padding: 30px;
+    margin-bottom: 15px;
     background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
     border: 2px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */
   }
@@ -192,25 +193,29 @@
     -webkit-background-clip: text; /* Arka planı sadece yazı ile gösteriyor */
     color: transparent; /* Yazı rengini şeffaf yaparak arka planı görünebilir kılacağız */  }
   
-  .feedback-form input,
-  .feedback-form textarea {
-    width: 100%;
-    padding: 5px;
-    margin-top: 5px;
-    border: 0,1px solid gold;
-    border-radius: 4px;
-    font-size: 14px;
-    background-color: black
-  }
+    .feedback-form input,
+    .feedback-form textarea {
+      width: 100%;
+      max-width: 100%; /* Input'un taşmasını önler */
+      padding: 8px; /* İçeriğin taşmasını engeller */
+      border: 1px solid gold;
+      border-radius: 4px;
+      font-size: 14px;
+      background-color: black;
+      color: white;
+      box-sizing: border-box; /* Padding ve border eklenince genişliğin taşmasını engeller */
+    }
+    
   
-  .feedback-form input:focus,
-.feedback-form textarea:focus {
-  border: 1px solid  #FFD700;  /* Sarımsı bir renk (altın) kullanıldı */
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);  /* Hafif siyah bir gölge ekledik */
-  outline: none;
-  background-color: black;
-  color: white;
-}
+    .feedback-form input:focus,
+    .feedback-form textarea:focus {
+      border: 1px solid #FFD700;
+      box-shadow: 0 0 5px 2px rgba(255, 215, 0, 0.5); /* Altın rengi gölgeyi optimize ettik */
+      outline: none;
+    }
+    .feedback-form .form-group {
+      overflow: hidden; /* İçerik taşmasını engellemek için */
+    }
   
   .feedback-form textarea {
     resize: vertical;
@@ -230,3 +235,37 @@
   .btn-submit:hover {
     background-color: #e65c00; /* Hover durumunda renk değişimi */
   }
+
+  @media screen and (max-width: 768px) {
+    .category-details-container {
+      flex-direction: column; /* Mobilde dikey hizala */
+      align-items: center; /* İçeriği ortala */
+    }
+  
+    .category-details-left,
+    .category-details-right {
+      width: 100%; /* Tam genişlik */
+      padding: 15px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .car-detail-slist {
+      grid-template-columns: 1fr; /* Mobilde tek sütun */
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .category-details-title {
+      font-size: 1.8rem;
+    }
+  
+    .car-details-title {
+      font-size: 1.2rem;
+    }
+  
+    .btn-category-details-incele {
+      font-size: 13px;
+      padding: 8px 12px;
+    }
+  }
+    
+  

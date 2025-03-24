@@ -22,26 +22,24 @@ namespace CarShop.Data.Concrete.EfCore
 
         public Car AddNewCar(string brand, string model, decimal price, int year, int categoryId, int modelId)
         {
-            // En son eklenen CarId'yi alıyoruz
             int newCarId = ShopContext.Cars
                                       .OrderByDescending(c => c.CarId)
                                       .FirstOrDefault()?.CarId + 1 ?? 1; // Eğer hiçbir araç yoksa 1'den başla
 
-            // Yeni araba nesnesi oluşturuluyor ve CarId manuel olarak atanıyor
+            
             var newCar = new Car
             {
-                CarId = newCarId, // Manuel olarak CarId belirliyoruz
+                CarId = newCarId, 
                 Brand = brand,
                 Model = model,
                 Price = price,
                 Year = year
             };
 
-            // Yeni arabayı veritabanına ekliyoruz
+            
             ShopContext.Cars.Add(newCar);
-            ShopContext.SaveChanges();  // İlk SaveChanges() burada araba kaydediliyor ve CarId oluşuyor.
+            ShopContext.SaveChanges();  
 
-            // Var olan kategoriyi buluyoruz ya da yeni kategori ekliyoruz
             var existingCategory = ShopContext.CarCategories
                 .FirstOrDefault(c => c.CategoryId == categoryId);
             if (existingCategory != null)
@@ -53,7 +51,6 @@ namespace CarShop.Data.Concrete.EfCore
                 ShopContext.CarCategories.Add(new CarCategory { CarId = newCar.CarId, CategoryId = categoryId });
             }
 
-            // Var olan modeli buluyoruz ya da yeni model ekliyoruz
             var existingModel = ShopContext.CarModels
                 .FirstOrDefault(m => m.ModelId == modelId);
             if (existingModel != null)
@@ -65,8 +62,7 @@ namespace CarShop.Data.Concrete.EfCore
                 ShopContext.CarModels.Add(new CarModel { CarId = newCar.CarId, ModelId = modelId });
             }
 
-            // Son SaveChanges() çağrısını burada yapıyoruz
-            ShopContext.SaveChanges();  // Son değişiklikleri kaydediyoruz.
+            ShopContext.SaveChanges(); 
 
             return newCar;
         }
@@ -82,21 +78,17 @@ namespace CarShop.Data.Concrete.EfCore
 
             if (carToDelete != null)
             {
-                // Favori tablosundan silme işlemi
                 ShopContext.FavoriteCarCars.RemoveRange(carToDelete.FavoriteCarCars);
 
-                // Kategori ve model ilişkilerini silme
                 ShopContext.CarCategories.RemoveRange(carToDelete.CarCategories);
                 ShopContext.CarModels.RemoveRange(carToDelete.CarModels);
 
-                // Araba kaydını silme
                 ShopContext.Cars.Remove(carToDelete);
 
-                // Değişiklikleri veritabanına kaydetmek
                 ShopContext.SaveChanges();
             }
 
-            return carToDelete;  // Silinen araba bilgisi döndürülüyor (ya da null dönebilir)
+            return carToDelete;  
         }
 
         public Car GetCarByName(string carName)
@@ -151,7 +143,7 @@ namespace CarShop.Data.Concrete.EfCore
         public List<Car> GetHomePageCars()
         {
             return ShopContext.Cars
-                .OrderBy(car => car.CarId) // Araçları Id'ye göre sırala
+                .OrderBy(car => car.CarId) 
                 .ToList();
         }
 

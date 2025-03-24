@@ -10,7 +10,7 @@ namespace CarShop.Business.Abstract
     public interface IFavoriteCarService
     {
         Task AddFavoriteCar(string userName, int carId);
-        Task<List<CarDetailModel>> GetFavoriteCars(string userName);  // CarDetailModel 
+        Task<List<CarDetailModel>> GetFavoriteCars(string userName);  
         Task RemoveFavoriteCar(string userName, int carId);
 
     }

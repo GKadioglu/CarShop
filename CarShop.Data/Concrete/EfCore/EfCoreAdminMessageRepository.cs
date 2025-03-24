@@ -22,7 +22,6 @@ namespace CarShop.Data.Concrete.EfCore
 
         public async Task<AdminMessage> AnswerMessageAsync(string sender, string receiver, string message, int messageId)
         {
-            // Yeni admin mesajını oluştur
             var adminAnswer = new AdminMessage
             {
                 Sender = sender,
@@ -30,11 +29,9 @@ namespace CarShop.Data.Concrete.EfCore
                 Message = message
             };
 
-            // Admin mesajını ekle
             await ShopContext.AdminMessages.AddAsync(adminAnswer);
             await ShopContext.SaveChangesAsync();
 
-            // AdminMessageAnonimMessage ilişkisini kur
             var adminAnonimMessage = new AdminMessageAnonimMessage
             {
                 MessageId = messageId,

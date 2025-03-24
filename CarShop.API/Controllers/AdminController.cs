@@ -112,7 +112,7 @@ namespace CarShop.API.Controllers
                 {
                     var categoryModel = new CategoryListModel
                     {
-                        Categories = result.Data // Başarılıysa Data'yı ata
+                        Categories = result.Data 
                     };
                     return Ok(categoryModel);
                 }
@@ -146,7 +146,6 @@ namespace CarShop.API.Controllers
         {
             try
             {
-                // Bildirimi ekleme işlemi
                 var newNotification = _notificationService.AddNewNotification(
                     request.Sender,
                     request.Title,
@@ -154,7 +153,6 @@ namespace CarShop.API.Controllers
                     request.CreatedDate
                 );
 
-                // Başarılı olursa
                 return Ok(newNotification);
             }
             catch (Exception ex)
@@ -186,11 +184,10 @@ namespace CarShop.API.Controllers
 
                 if (result == null || !result.Data.Any())
                 {
-                    return NotFound(new { message = result.Message }); // Mesaj bulunamadıysa
+                    return NotFound(new { message = result.Message }); 
                 }
 
-                // Başarıyla mesajlar döndürüldü
-                return Ok(result.Data); // Veri ile birlikte başarılı dönüş
+                return Ok(result.Data); 
             }
             catch (Exception ex)
             {
@@ -212,7 +209,6 @@ namespace CarShop.API.Controllers
                     return NotFound(new { message = result.Message }); // teklif bulunamadıysa
                 }
 
-                // Başarıyla teklifler döndürüldü
                 return Ok(result.Data); // Veri ile birlikte başarılı dönüş
             }
             catch (Exception ex)
@@ -229,7 +225,6 @@ namespace CarShop.API.Controllers
         [HttpGet("getAdminOffer")]
         public async Task<IActionResult> GetAdminOffer()
         {
-            // Admin teklif cevaplarını getir
             var adminOffers = await _adminMakeAnOfferService.GetAdminOffer();
 
             if (adminOffers == null || !adminOffers.Success)
@@ -237,7 +232,6 @@ namespace CarShop.API.Controllers
                 return NotFound(new { Message = "Teklif cevabı bulunamadı." });
             }
 
-            // Başarılı dönüş
             return Ok(adminOffers);
         }
 

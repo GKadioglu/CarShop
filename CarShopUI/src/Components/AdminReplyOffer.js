@@ -3,10 +3,10 @@ import "./Css/AdminReplyOffer.css";
 import { fetchWithToken } from "./Shared/api";
 
 function AdminReplyOffer() {
-  const [offers, setOffers] = useState([]); // Yeni teklifler
+  const [offers, setOffers] = useState([]); 
   const [selectedOffer, setSelectedOffer] = useState(null);
-  const [acceptedOffers, setAcceptedOffers] = useState([]); // Kabul edilenler
-  const [rejectedOffers, setRejectedOffers] = useState([]); // Reddedilenler
+  const [acceptedOffers, setAcceptedOffers] = useState([]); 
+  const [rejectedOffers, setRejectedOffers] = useState([]); 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedFilteredOffer, setSelectedFilteredOffer] = useState(null);
@@ -22,7 +22,6 @@ function AdminReplyOffer() {
         }
         const data = await response.json();
 
-        // **Sadece cevaplanmamış teklifleri filtrele**
         const unansweredOffers = data.filter(
           (offer) =>
             !offer.makeAnOfferCars.some(
@@ -92,19 +91,16 @@ function AdminReplyOffer() {
 
       alert(result.message);
 
-      // Sayfayı yenileyerek teklif listesini güncelleyebiliriz
       window.location.reload();
     } catch (err) {
       alert(err.message);
     }
   };
-  // Filtrelenmiş tekliflere tıklanınca detayları açalım
   const handleSelectFilteredOffer = (offer) => {
     setSelectedFilteredOffer(offer);
-    setSelectedOffer(null); // Yeni teklifler kısmındaki seçimi sıfırla
+    setSelectedOffer(null); 
   };
 
-  // Detayları gösteren bölümü güncelleyelim
   const selectedDetailOffer = selectedOffer || selectedFilteredOffer;
   if (loading) return <div>Yükleniyor...</div>;
   if (error) return <div>Hata: {error}</div>;

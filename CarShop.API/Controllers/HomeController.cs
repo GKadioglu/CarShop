@@ -34,36 +34,30 @@ namespace CarShop.API.Controllers
                 return BadRequest("Sayfa veya sayfa boyutu 1'den küçük olamaz.");
             }
 
-            // GetHomePageCars'dan dönen IDataResult<List<Car>>'i alıyoruz
             var result = _carService.GetHomePageCars();
 
-            // Sonuç başarılı mı diye kontrol ediyoruz
             if (!result.Success)
             {
-                return BadRequest(result.Message); // Başarısızsa hata mesajını döndürüyoruz
+                return BadRequest(result.Message);
             }
 
-            // Tüm araçları sıralayıp listeye alıyoruz (result.Data ile veri alıyoruz)
             var allCars = result.Data
-                                  .OrderBy(car => car.CarId) // ID'ye göre sıralama
+                                  .OrderBy(car => car.CarId) 
                                   .ToList();
 
-            // Toplam araç sayısını alıyoruz
             var totalCars = allCars.Count;
 
-            // Sayfalama işlemi
             var cars = allCars
-                .Skip((page - 1) * pageSize) // Sayfa atlama
-                .Take(pageSize) // Sayfa başına düşen kayıt sayısı
+                .Skip((page - 1) * pageSize) 
+                .Take(pageSize) 
                 .ToList();
 
-            // ViewModel'i dolduruyoruz
             var carViewModel = new CarListModel
             {
                 Cars = cars,
-                TotalCars = totalCars, // Toplam araç sayısını döndür
-                CurrentPage = page,    // Şu anki sayfa
-                TotalPages = (int)Math.Ceiling((double)totalCars / pageSize) // Toplam sayfa sayısı
+                TotalCars = totalCars, 
+                CurrentPage = page,    
+                TotalPages = (int)Math.Ceiling((double)totalCars / pageSize) 
             };
 
             return Ok(carViewModel);

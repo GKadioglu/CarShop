@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"; // useParams hook'unu ekleyin
-import { useNavigate, useLocation } from "react-router-dom"; // useLocation ekledik
+import { useParams } from "react-router-dom"; 
+import { useNavigate, useLocation } from "react-router-dom"; 
 import "./Css/CategoryDetails.css";
 
 const CategoryDetails = () => {
-  const { categoryName } = useParams(); // URL'deki kategori adını alıyoruz
+  const { categoryName } = useParams(); 
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/category/categories/${categoryName}`) // Kategori adına göre API çağırıyoruz
+    fetch(`http://localhost:5000/api/category/categories/${categoryName}`) 
       .then((response) => {
         if (!response.ok) {
           throw new Error("API hatası!");
@@ -18,14 +18,14 @@ const CategoryDetails = () => {
         return response.json();
       })
       .then((data) => {
-        setCars(data.data.cars); // Kategoriye ait araçları alıyoruz
+        setCars(data.data.cars); 
         setLoading(false);
       })
       .catch((error) => {
         console.error("Veri çekme hatası:", error);
         setLoading(false);
       });
-  }, [categoryName]); // categoryName her değiştiğinde API çağrısı yapılır
+  }, [categoryName]); 
   const handleInceleClick = (carId) => {
     navigate(`/car/${carId}`);
   };

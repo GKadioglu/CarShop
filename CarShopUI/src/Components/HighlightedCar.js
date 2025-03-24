@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "../Components/Css/HighlightedCar.css";
 import logo from "../Components/Images/car shop (2)-Photoroom.png";
-import { FaArrowRight } from "react-icons/fa"; // React Icons'dan ikon import edilmesi
+import { FaArrowRight } from "react-icons/fa"; 
 
 function HighlightedCar() {
-  const [highlightedCars, setHighlightedCars] = useState([]); // API'den gelen araçlar
-  const [loading, setLoading] = useState(true); // Yükleniyor durumu
-  const [currentCarIndex, setCurrentCarIndex] = useState(0); // Şu anda gösterilen aracın indeksi
+  const [highlightedCars, setHighlightedCars] = useState([]); 
+  const [loading, setLoading] = useState(true); 
+  const [currentCarIndex, setCurrentCarIndex] = useState(0); 
 
-  // API'den veri çekme
   useEffect(() => {
     const fetchHighlightedCars = async () => {
       try {
@@ -27,7 +26,6 @@ function HighlightedCar() {
     fetchHighlightedCars();
   }, []);
 
-  // 10 saniyede bir otomatik değişim
   useEffect(() => {
     if (highlightedCars.length > 0) {
       const interval = setInterval(() => {
@@ -35,11 +33,10 @@ function HighlightedCar() {
           (prevIndex) => (prevIndex + 1) % highlightedCars.length
         );
       }, 5000); // 10 saniye
-      return () => clearInterval(interval); // Component unmount olduğunda temizle
+      return () => clearInterval(interval); 
     }
   }, [highlightedCars]);
 
-  // Manuel değişim için bir sonraki araca geç
   const handleNextCar = () => {
     setCurrentCarIndex((prevIndex) => (prevIndex + 1) % highlightedCars.length);
   };
@@ -48,7 +45,6 @@ function HighlightedCar() {
     return <div>Loading...</div>;
   }
 
-  // Şu anda gösterilecek araç
   const currentCar = highlightedCars[currentCarIndex];
   return (
     <div
@@ -58,10 +54,10 @@ function HighlightedCar() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        minHeight: "100vh", // Ekranın tamamını kapsar
-        width: "100%", // Tam genişlikte yer kaplar
-        margin: 0, // Varsayılan boşlukları kaldırır
-        padding: 0, // Varsayılan iç boşlukları kaldırır
+        minHeight: "100vh", 
+        width: "100%", 
+        margin: 0, 
+        padding: 0, 
       }}
     >
       <div className="overlay">

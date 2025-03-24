@@ -25,16 +25,14 @@ function Register() {
 
   const [message, setMessage] = useState(null);
   const [isRegistered, setIsRegistered] = useState(false);
-  const [isLoading, setIsLoading] = useState(false); // Yükleme durumu
-  const [passwordError, setPasswordError] = useState(""); // Şifre hatası mesajı
+  const [isLoading, setIsLoading] = useState(false); 
+  const [passwordError, setPasswordError] = useState(""); 
 
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
 
-    // Şifre değiştiğinde formatı kontrol et
     if (id === "password") {
-      // Şifre için regex kontrolü
       const passwordRegex =
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
       if (!passwordRegex.test(value)) {
@@ -42,7 +40,7 @@ function Register() {
           "Şifre en az 8 karakter, küçük harf, büyük harf, rakam ve özel karakter içermelidir."
         );
       } else {
-        setPasswordError(""); // Hata mesajını temizle
+        setPasswordError(""); 
       }
     }
   };
@@ -50,7 +48,6 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Şifre doğrulama
     if (formData.password !== formData.rePassword) {
       setMessage({
         text: "Şifreler eşleşmiyor.",
@@ -59,7 +56,6 @@ function Register() {
       return;
     }
 
-    // Eğer şifre formatı yanlışsa
     if (passwordError) {
       setMessage({
         text: passwordError,
@@ -68,10 +64,10 @@ function Register() {
       return;
     }
 
-    setIsLoading(true); // Yüklemeyi başlat
+    setIsLoading(true); 
     setMessage({
       text: "Yükleniyor...",
-      type: "loading", // Yükleme mesajı
+      type: "loading", 
     });
 
     try {
@@ -89,13 +85,13 @@ function Register() {
       const result = await response.json();
 
       setTimeout(() => {
-        setIsLoading(false); // Yükleme durumu bitti
+        setIsLoading(false); 
         if (response.ok) {
           setMessage({
             text: "Kayıt başarılı! Lütfen emailinizi kontrol edin.",
-            type: "success",  // Başarı durumu
+            type: "success",  
           });
-          setIsRegistered(true); // Kayıt başarılı olduğunda formu gizlemek için durumu güncelliyoruz
+          setIsRegistered(true); 
           setFormData({
             firstName: "",
             lastName: "",
@@ -110,12 +106,12 @@ function Register() {
             type: "error",
           });
         }
-      }, 1000); // 1 saniye bekle
+      }, 1000); 
     } catch (error) {
-      setIsLoading(false); // Yükleme durumu bitti
+      setIsLoading(false); 
       setMessage({
         text: "Bir hata oluştu. Lütfen tekrar deneyiniz.",
-        type: "error",  // Hata durumu
+        type: "error",  
       });
     }
   };

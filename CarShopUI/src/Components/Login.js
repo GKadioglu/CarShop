@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Yönlendirme için hook
-import "./Css/Login.css"; // CSS dosyanız
+import { useNavigate } from "react-router-dom"; 
+import "./Css/Login.css"; 
 import { useAuth } from "./Shared/AuthContext";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
@@ -20,7 +20,7 @@ function Login() {
   });
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [successMessage, setSuccessMessage] = useState(""); // Başarılı giriş mesajı için state
+  const [successMessage, setSuccessMessage] = useState(""); 
 
   const navigate = useNavigate();
 
@@ -57,14 +57,14 @@ function Login() {
         setError(data?.message || "Bir hata oluştu. Lütfen tekrar deneyin.");
         setIsSubmitting(false);
       } else {
-        const data = await response.json(); // Backend'den gelen veriyi al
+        const data = await response.json(); 
         console.log("Gelen backend verisi:", data);
 
         // Backend'den alınan verilerle giriş yap
-        login(data.userName, data.role, data.token, data.email); // Rol bilgisi burada kullanılıyor
+        login(data.userName, data.role, data.token, data.email); 
 
         setSuccessMessage("Başarılı Giriş!");
-        setTimeout(() => navigate("/"), 2000); // Başarılı girişte ana sayfaya yönlendir
+        setTimeout(() => navigate("/"), 2000); 
       }
     } catch (err) {
       setError("Sunucu ile bağlantı hatası");

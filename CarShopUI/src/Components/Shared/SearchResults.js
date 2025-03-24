@@ -15,7 +15,7 @@ const SearchResults = () => {
       fetch(`http://localhost:5000/api/car/search?name=${query}`)
         .then(response => response.json())
         .then(data => {
-          setCars(data.cars);  // Buradaki data.cars doğru yer
+          setCars(data.cars);  
           setLoading(false);
         })
         .catch(error => {

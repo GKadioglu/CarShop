@@ -7,11 +7,11 @@ import logo from "../Components/Images/car shop (2)-Photoroom.png";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 
 function CarDetails() {
-  const { carId } = useParams(); // URL'den carId parametresini alır
+  const { carId } = useParams(); 
   const [carDetails, setCarDetails] = useState(null);
   const [error, setError] = useState(null);
   const [modelUrl, setModelUrl] = useState("");
-  const navigate = useNavigate(); // Navig ate kullanarak sayfa yönlendirme
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const fetchCarDetails = async () => {
@@ -19,7 +19,7 @@ function CarDetails() {
         const response = await axios.get(
           `http://localhost:5000/api/car/details/${carId}`
         );
-        setCarDetails(response.data.data); // API'den gelen veriyi state'e ata
+        setCarDetails(response.data.data); 
       } catch (err) {
         setError("Car not found");
       }
@@ -40,14 +40,14 @@ function CarDetails() {
   }
 
   if (!carDetails) {
-    return <div className="loading-message">Loading...</div>; // Veriler yüklenirken gösterilecek
+    return <div className="loading-message">Loading...</div>; 
   }
 
   const handleContactUs = () => {
-    navigate(`/contact/${carDetails.brand}-${carDetails.model}`); // İletişim sayfasına yönlendirme
+    navigate(`/contact/${carDetails.brand}-${carDetails.model}`); 
   };
   const handleMakeAnOffer = () => {
-    navigate(`/makeAnOffer/${carDetails.brand}-${carDetails.model}`); // İletişim sayfasına yönlendirme
+    navigate(`/makeAnOffer/${carDetails.brand}-${carDetails.model}`); 
   };
   return (
     <div className="car-details-container">

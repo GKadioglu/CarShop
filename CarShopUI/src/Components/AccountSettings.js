@@ -43,8 +43,8 @@ function AccountSettings() {
   
         if (response.ok) {
           alert("Hesabınız başarıyla silindi.");
-          navigate("/"); // Ana sayfaya yönlendir
-          window.location.reload(); // Sayfayı yenile
+          navigate("/"); 
+          window.location.reload(); 
         } else {
           throw new Error("Hesap silinemedi.");
         }

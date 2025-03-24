@@ -22,9 +22,8 @@ namespace CarShop.Business.Concrete
             var model3D = _unitofwork.Model3D.GetModel3D(carId);
             if (model3D == null)
             {
-                return null; // Ya da özel bir hata durumu döndürebilirsin
+                return null; 
             }
-            // Model3D'yi Cars3DModel formatına dönüştür
             var cars3DModel = new Cars3DModel
             {
                 Model3dId = model3D.Model3dId,

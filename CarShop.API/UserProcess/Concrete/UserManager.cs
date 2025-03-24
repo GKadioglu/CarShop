@@ -29,7 +29,6 @@ namespace CarShop.API.UserProcess.Concrete
                 throw new ArgumentException("E-posta adresi boş olamaz.", nameof(email));
             }
 
-            // UserManager aracılığıyla kullanıcıyı bul
             var user = await _userManager.FindByEmailAsync(email);
 
             if (user == null)
@@ -130,11 +129,9 @@ namespace CarShop.API.UserProcess.Concrete
                 return new ErrorDataResult<User>(UserMessages.UserNotFound);
             }
 
-            // Kullanıcı adını güncellemeden önce diğer bilgileri güncelle
             user.FirstName = firstName;
             user.LastName = lastName;
 
-            // Eğer kullanıcı adı değiştirilmişse, güncelleme işlemini gerçekleştirin
             if (user.UserName != userName)
             {
                 user.UserName = userName;

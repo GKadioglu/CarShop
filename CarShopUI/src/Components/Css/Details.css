@@ -200,41 +200,39 @@
     width: 100%;
     height: 100%;
   }
-  /* Responsive Tasarım */
-
-/* Tablet ve daha küçük ekranlar için */
-@media (max-width: 1024px) {
+  
+  /* Tablet ve mobil cihazlar için */
+/* 1048px'den küçük ekranlar için (Tablet ve bazı büyük telefonlar) */
+@media (max-width: 1048px) {
   .car-details-container {
-    flex-direction: column;
-    height: auto;
-    align-items: center;
+    flex-direction: column; /* İçerikleri dikey hizala */
+    height: auto; /* Sayfa yüksekliği otomatik olsun */
   }
 
   .car-image-container {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Resim alanı tam genişlik alsın */
+    height: 100%; /* Mobilde çok büyük olmaması için */
   }
 
   .car-image {
-    height: auto;
-    max-height: 400px;
+    height: 100%;
+    object-fit: cover; /* Görüntüyü orantılı olarak sığdır */
   }
 
   .car-info-container {
-    width: 90%;
-    padding: 15px;
-  }
-}
-
-/* Mobil cihazlar için */
-@media (max-width: 768px) {
-  .car-info-container {
-    width: 100%;
-    padding: 10px;
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    width: 100%; /* Bilgiler tam genişlik alsın */
+    padding-top: 0px !important;
+    margin-top: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Bilgiler kısmını dikey hizala */
+    align-items: center; /* Bilgiler ve butonları yatayda ortala */
+    justify-content: center; /* İçeriği ortala */
   }
 
   .car-info h1 {
-    font-size: 1.5em;
+    font-size: 1.8em; /* Mobilde daha küçük başlık */
   }
 
   .car-info p {
@@ -243,24 +241,27 @@
 
   .btn-contactUs,
   .btn-contact-make-an-offer {
-    width: 100%;
-    max-width: 200px;
-    height: 40px;
-    font-size: 14px;
-    margin-left: 10px;
+    width: 100%; /* Butonlar tam genişlik alsın */
+    max-width: 250px; /* Ancak fazla geniş olmasın */
+    margin: 10px auto; /* Orta hizalama */
   }
 
   .cart-logo {
-    max-width: 60%;
+    max-width: 60%; /* Logonun boyutunu küçült */
+    margin-top: 20px; /* Logo'nun butonlardan sonra alt tarafta kalmasını sağla */
   }
 }
 
-/* Küçük mobil cihazlar için */
-@media (max-width: 480px) {
-  
+
+/* Küçük ekranlar (Telefonlar için) */
+/* Küçük ekranlar (Telefonlar için) */
+@media (max-width: 600px) {
+  .car-image-container {
+    height: 200px; /* Telefon ekranında daha az yer kaplasın */
+  }
 
   .car-info h1 {
-    font-size: 1.3em;
+    font-size: 1.5em; /* Daha küçük başlık */
   }
 
   .car-info p {
@@ -269,14 +270,23 @@
 
   .btn-contactUs,
   .btn-contact-make-an-offer {
-    width: 100%;
-    height: 35px;
-    font-size: 13px;
+    font-size: 14px; /* Küçük ekranlarda daha küçük butonlar */
+    height: 40px;
+    margin-top: 15px; /* Butonlar arasında boşluk ekleyelim */
+  }
+
+  .car-info-container {
+    display: flex;
+    flex-direction: column; /* Dikey hizalama */
+    align-items: center; /* Butonlar ve logo ortalanacak */
+    justify-content: center;
   }
 
   .cart-logo {
-    max-width: 50%;
+    max-width: 70%; /* Telefonlarda daha küçük logo */
   }
 }
+
+
 
   

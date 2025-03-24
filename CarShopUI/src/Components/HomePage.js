@@ -15,7 +15,7 @@ const HomePage = () => {
   const [totalPages, setTotalPages] = useState(0);
   const carsPerPage = 6;
   const [favoriteCars, setFavoriteCars] = useState([]);
-  const [showWarning, setShowWarning] = useState(false); // Uyarıyı göstermek için bir state
+  const [showWarning, setShowWarning] = useState(false); 
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -76,7 +76,6 @@ const HomePage = () => {
 
   const handleFavoriteToggle = (carId) => {
     if (!token) {
-      // Giriş yapmamış kullanıcı için uyarıyı göster
       setShowWarning(true);
       setTimeout(() => setShowWarning(false), 5000); // 5 saniye sonra uyarıyı gizle
       return;

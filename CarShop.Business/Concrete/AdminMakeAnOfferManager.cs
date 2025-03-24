@@ -35,7 +35,7 @@ namespace CarShop.Business.Concrete
                 Receiver = adminOffer.Receiver,
                 Acceptance = adminOffer.Acceptance,
                 userMakeOffers = adminOffer.AdminMakeAnOfferUserMakeAnOffers
-                    .Where(ama => ama.UserMakeAnOffer != null) // Null kontrolü
+                    .Where(ama => ama.UserMakeAnOffer != null) 
                     .Select(ama => new UserMakeOffers
                     {
                         UserOfferId = ama.UserMakeAnOffer.UserOfferId,
@@ -44,7 +44,7 @@ namespace CarShop.Business.Concrete
                         PhoneNumber = ama.UserMakeAnOffer.PhoneNumber,
                         Offer = ama.UserMakeAnOffer.Offer,
                         UserMakeOfferCars = ama.UserMakeAnOffer.MakeAnOfferCars
-                            .Where(c => c.Car != null) // Car objesi null kontrolü
+                            .Where(c => c.Car != null) 
                             .Select(c => new UserMakeOfferCars
                             {
                                 CarId = c.Car.CarId,
@@ -57,7 +57,6 @@ namespace CarShop.Business.Concrete
                     }).ToList()
             }).ToList();
 
-            // Başarılı dönüş
             return new SuccessDataResult<List<AdminMakeAnOfferModel>>(models, OfferMessages.OfferFound);
         }
 
@@ -78,7 +77,7 @@ namespace CarShop.Business.Concrete
                 Receiver = adminOffer.Receiver,
                 Acceptance = adminOffer.Acceptance,
                 userMakeOffers = adminOffer.AdminMakeAnOfferUserMakeAnOffers
-                    .Where(ama => ama.UserMakeAnOffer != null) // Null kontrolü
+                    .Where(ama => ama.UserMakeAnOffer != null) 
                     .Select(ama => new UserMakeOffers
                     {
                         UserOfferId = ama.UserMakeAnOffer.UserOfferId,
@@ -87,7 +86,7 @@ namespace CarShop.Business.Concrete
                         PhoneNumber = ama.UserMakeAnOffer.PhoneNumber,
                         Offer = ama.UserMakeAnOffer.Offer,
                         UserMakeOfferCars = ama.UserMakeAnOffer.MakeAnOfferCars
-                            .Where(c => c.Car != null) // Car objesi null kontrolü
+                            .Where(c => c.Car != null) 
                             .Select(c => new UserMakeOfferCars
                             {
                                 CarId = c.Car.CarId,

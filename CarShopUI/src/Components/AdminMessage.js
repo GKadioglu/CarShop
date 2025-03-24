@@ -6,10 +6,10 @@ function AdminMessage() {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedMessage, setSelectedMessage] = useState(null); // Seçilen mesaj
-  const [sender, setSender] = useState("admin"); // Gönderen kısmı her zaman "admin"
-  const [receiver, setReceiver] = useState(""); // Alıcı
-  const [message, setMessage] = useState(""); // Cevap mesajı
+  const [selectedMessage, setSelectedMessage] = useState(null);
+  const [sender, setSender] = useState("admin"); 
+  const [receiver, setReceiver] = useState(""); 
+  const [message, setMessage] = useState(""); 
 
   useEffect(() => {
     const fetchMessages = async () => {
@@ -22,7 +22,7 @@ function AdminMessage() {
         }
         const data = await response.json();
         setMessages(data);
-        setSelectedMessage(data[0]); // Sayfa ilk açıldığında ilk mesajı seç
+        setSelectedMessage(data[0]); 
       } catch (err) {
         setError(err.message);
       } finally {
@@ -35,7 +35,7 @@ function AdminMessage() {
 
   const handleSelectMessage = (message) => {
     setSelectedMessage(message);
-    setReceiver(message.fullName); // Alıcıyı seçilen mesajın kullanıcı adı olarak ayarla
+    setReceiver(message.fullName); 
   };
 
   const handleReplySubmit = async () => {
@@ -63,7 +63,6 @@ function AdminMessage() {
       const data = await response.json();
       console.log("Yanıt başarıyla gönderildi:", data);
 
-      // Yanıt gönderildikten sonra, cevaplanan mesajı güncelle
       const updatedMessages = messages.map((msg) =>
         msg.messageId === selectedMessage.messageId
           ? { ...msg, isReplied: true }
@@ -97,7 +96,7 @@ function AdminMessage() {
             <div
               key={index}
               className="admin-message-item"
-              onClick={() => handleSelectMessage(message)} // Mesaja tıklandığında detayları göster
+              onClick={() => handleSelectMessage(message)} 
             >
               <div className="admin-message-header">
                 <h3>{message.fullName}</h3> {/* Yalnızca kişinin adı */}

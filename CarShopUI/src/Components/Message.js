@@ -31,7 +31,7 @@ const MessagesPage = () => {
         setMessages((prevMessages) =>
           prevMessages.filter((msg) => msg.messageId !== messageId)
         );
-        window.location.reload(); // ✅ Sayfayı yenile
+        window.location.reload(); 
       }
     } catch (err) {
       alert("Sunucu ile bağlantı hatası.");
@@ -52,7 +52,7 @@ const MessagesPage = () => {
         );
 
         const data = await response.json();
-        console.log("Gelen mesajlar:", data.data); // 🔍 Konsolda mesajları kontrol et
+        console.log("Gelen mesajlar:", data.data); 
 
         if (!response.ok) {
           setError(data.data.Message || "Mesajlar alınırken bir hata oluştu.");

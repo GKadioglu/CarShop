@@ -19,16 +19,15 @@ function HomePageNews() {
         <div className="garage-news-content">
           <div className="news-article">
             <div className="news-article-image">
-              {/* Görsel eklemek için burayı kullanın */}
               <img
                 src={carimage1}
                 alt="Car News"
                 style={{
-                  maxWidth: "100%", // Görselin genişliğini kartın genişliğine uyumlu hale getirir
-                  maxHeight: "100%", // Görselin yüksekliğini kartın yüksekliğine uyumlu hale getirir
-                  objectFit: "contain", // Görselin oranları korunarak kartın içine sığmasını sağlar
-                  display: "block", // Görselin altındaki boşluğu ortadan kaldırmak için
-                  margin: "0 auto", // Görseli ortalamak için
+                  maxWidth: "100%", 
+                  maxHeight: "100%", 
+                  objectFit: "contain", 
+                  display: "block", 
+                  margin: "0 auto",
                 }}
               />
             </div>
@@ -52,11 +51,11 @@ function HomePageNews() {
                 src={carimage2}
                 alt="Car Update"
                 style={{
-                  maxWidth: "100%", // Görselin genişliğini kartın genişliğine uyumlu hale getirir
-                  maxHeight: "100%", // Görselin yüksekliğini kartın yüksekliğine uyumlu hale getirir
-                  objectFit: "contain", // Görselin oranları korunarak kartın içine sığmasını sağlar
-                  display: "block", // Görselin altındaki boşluğu ortadan kaldırmak için
-                  margin: "0 auto", // Görseli ortalamak için
+                  maxWidth: "100%", 
+                  maxHeight: "100%",
+                  objectFit: "contain", 
+                  display: "block", 
+                  margin: "0 auto", 
                 }}
               />
             </div>

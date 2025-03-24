@@ -24,9 +24,7 @@ function Favourite() {
     })
       .then((response) => response.json())
       .then((data) => {
-        // Başarılı işlem kontrolü
         if (data.message && data.message.includes("successfully")) {
-          // Favori araç listesini güncelle
           setFavoriteCars((prevCars) => {
             return prevCars.filter((car) => car.carId !== carId);
           });

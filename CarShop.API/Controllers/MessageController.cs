@@ -57,20 +57,17 @@ namespace CarShop.API.Controllers
         {
             try
             {
-                // Anonim mesajları alıyoruz
                 var result = _anonimMessageService.GetMessage();
 
                 if (result == null || !result.Data.Any())
                 {
-                    return NotFound(new { message = result.Message }); // Mesaj bulunamadıysa
+                    return NotFound(new { message = result.Message }); 
                 }
 
-                // Başarıyla mesajlar döndürüldü
-                return Ok(result.Data); // Veri ile birlikte başarılı dönüş
+                return Ok(result.Data); 
             }
             catch (Exception ex)
             {
-                // Hata durumu
                 return StatusCode(500, new { message = "Mesajlar alınamadı.", error = ex.Message });
             }
         }
@@ -80,7 +77,7 @@ namespace CarShop.API.Controllers
         {
 
             var result = await _adminMessageService.AnswerMessageAsync(dto.Sender, dto.Receiver, dto.Message, dto.MessageId);
-            return Ok(result); // Başarılı dönüşte sonucu döndür
+            return Ok(result); 
 
         }
         public class AnswerMessageDto

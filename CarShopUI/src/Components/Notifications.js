@@ -4,13 +4,13 @@ import { useAuth } from "./Shared/AuthContext";
 import "./Css/Notifications.css";
 
 function Notifications() {
-  const { token, userName } = useAuth(); // userName'i ekledik
+  const { token, userName } = useAuth(); 
   const [notifications, setNotifications] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (!token || !userName) return; // Kullanıcı giriş yapmamışsa çalıştırma
+    if (!token || !userName) return; 
 
     const fetchNotifications = async () => {
       try {
@@ -23,7 +23,7 @@ function Notifications() {
         if (response.ok) {
           const formattedNotifications = data.data.map((notification) => {
             const userNotification = notification.addNotificationUserModels.find(
-              (n) => n.userName === userName // Dinamik hale getirildi
+              (n) => n.userName === userName 
             );
             return {
               ...notification,
@@ -45,7 +45,7 @@ function Notifications() {
     };
 
     fetchNotifications();
-  }, [token, userName]); // userName'i bağımlılığa ekledik
+  }, [token, userName]); 
 
   const toggleReadStatus = async (notificationsId, currentStatus) => {
     try {

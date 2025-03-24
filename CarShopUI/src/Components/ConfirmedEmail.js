@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import './Css/ConfirmedEmail.css'; // CSS dosyasını import et
+import './Css/ConfirmedEmail.css'; 
 
 function ConfirmedEmail() {
   const [confirmationStatus, setConfirmationStatus] = useState(null);
   const location = useLocation();
 
   useEffect(() => {
-    // URL parametrelerinden status bilgisini al
     const params = new URLSearchParams(location.search);
     const status = params.get('status');
 

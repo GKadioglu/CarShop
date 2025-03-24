@@ -8,7 +8,6 @@ function AdminNotification() {
   const [createdDate, setCreatedDate] = useState(new Date().toISOString());
   const [responseMessage, setResponseMessage] = useState("");
 
-  // Form gönderildiğinde API'yi çağır
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -20,7 +19,6 @@ function AdminNotification() {
     };
 
     try {
-      // API çağrısı
       const response = await fetchWithToken("http://localhost:5000/api/admin/addNewNotification", {
         method: "POST",
         body: JSON.stringify(newNotification),
@@ -33,7 +31,6 @@ function AdminNotification() {
         const data = await response.json();
         setResponseMessage("Bildirim başarıyla gönderildi!");
 
-        // Inputları sıfırlıyoruz
         setTitle("");
         setDescription("");
         setCreatedDate(new Date().toISOString());

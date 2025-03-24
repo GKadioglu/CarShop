@@ -39,12 +39,12 @@ namespace CarShop.Data.Concrete.EfCore
                 Message = message
             };
             ShopContext.AnonimMessages.Add(anonimMessage);
-            ShopContext.SaveChanges(); // MessageId burada atanacak
+            ShopContext.SaveChanges(); 
 
             var anonimMessageCar = new AnonimMessageCar
             {
                 CarId = carId,
-                MessageId = anonimMessage.MessageId // Burada MessageId'yi güncelleyin
+                MessageId = anonimMessage.MessageId 
             };
             ShopContext.AnonimMessageCars.Add(anonimMessageCar);
             ShopContext.SaveChanges();
@@ -65,12 +65,12 @@ namespace CarShop.Data.Concrete.EfCore
             var message = await ShopContext.AnonimMessages
                 .Include(m => m.AnonimMessageCars)
                 .Include(m => m.AdminMessageAnonimMessages)
-                .ThenInclude(ama => ama.AdminMessage) // ✅ AdminMessage'ı da dahil ettik!
+                .ThenInclude(ama => ama.AdminMessage) 
                 .FirstOrDefaultAsync(m => m.MessageId == messageId);
 
             if (message == null)
             {
-                return null; // Mesaj yoksa işlem yapma
+                return null; 
             }
 
             ShopContext.AnonimMessageCars.RemoveRange(message.AnonimMessageCars);

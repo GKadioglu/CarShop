@@ -5,16 +5,15 @@ import profile from "./Images/accountMenuImages/profile.png";
 
 
 function AdminUserEdit() {
-  const [users, setUsers] = useState([]); // Kullanıcı listesi
-  const [selectedUser, setSelectedUser] = useState(null); // Seçilen kullanıcı
-  const [loading, setLoading] = useState(true); // Yükleme durumu
-  const [error, setError] = useState(null); // Hata mesajı
+  const [users, setUsers] = useState([]); 
+  const [selectedUser, setSelectedUser] = useState(null); 
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
 
-  // Kullanıcıları API'den çek
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetchWithToken("http://localhost:5000/api/admin/getusers"); // API endpoint
+        const response = await fetchWithToken("http://localhost:5000/api/admin/getusers");
         if (!response.ok) {
           throw new Error("Kullanıcılar alınırken bir hata oluştu.");
         }

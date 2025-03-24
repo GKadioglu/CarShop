@@ -6,7 +6,7 @@ import logo from "../Images/car shop (2)-Photoroom.png";
 
 function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [menuOpen, setMenuOpen] = useState(false); // Hamburger için state
+  const [menuOpen, setMenuOpen] = useState(false); 
   const navigate = useNavigate();
   const { isAuthenticated, logout, userName, role } = useAuth();
 
@@ -19,7 +19,7 @@ function Navbar() {
   const handleSearchSubmit = (event) => {
     event.preventDefault();
     navigate(`/search?query=${searchTerm}`);
-    setMenuOpen(false); // Menü açıkken arama yapınca menü kapansın
+    setMenuOpen(false); 
   };
 
   const handleLogout = () => {
