@@ -17,3 +17,4 @@ C:\Users\Casper\Desktop\CarShop\CarShop.Business\obj\Debug\net8.0\CarShop.Busine
 C:\Users\Casper\Desktop\CarShop\CarShop.Business\obj\Debug\net8.0\refint\CarShop.Business.dll
 C:\Users\Casper\Desktop\CarShop\CarShop.Business\obj\Debug\net8.0\CarShop.Business.pdb
 C:\Users\Casper\Desktop\CarShop\CarShop.Business\obj\Debug\net8.0\ref\CarShop.Business.dll
+C:\Users\Casper\Desktop\CarShop\CarShop.Business\obj\Debug\net8.0\CarShop.Business.sourcelink.json

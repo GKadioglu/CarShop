@@ -17,3 +17,4 @@ C:\Users\Casper\Desktop\CarShop\CarShop.Data\obj\Debug\net8.0\refint\CarShop.Dat
 C:\Users\Casper\Desktop\CarShop\CarShop.Data\obj\Debug\net8.0\CarShop.Data.pdb
 C:\Users\Casper\Desktop\CarShop\CarShop.Data\obj\Debug\net8.0\CarShop.Data.genruntimeconfig.cache
 C:\Users\Casper\Desktop\CarShop\CarShop.Data\obj\Debug\net8.0\ref\CarShop.Data.dll
+C:\Users\Casper\Desktop\CarShop\CarShop.Data\obj\Debug\net8.0\CarShop.Data.sourcelink.json

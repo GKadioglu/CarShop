@@ -27,6 +27,7 @@ using Core.Utilities.IoC;
 using Core.DependencyResolver;
 using log4net;
 using log4net.Config;
+using CarShop.API.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -140,6 +141,7 @@ builder.Services.AddScoped<IAdminMakeAnOfferService, AdminMakeAnOfferManager>();
 builder.Services.AddScoped<IFavoriteCarService, FavoriteCarManager>(); // Burada FavoriteCarManager sınıfını kaydediyoruz
 
 builder.Services.AddControllersWithViews();  // MVC destek için
+builder.Services.AddSignalR();
 builder.Services.AddSingleton<TokenService>();
 
 // CORS politikalarını ekleyin
@@ -175,7 +177,7 @@ else
 
 app.UseHttpsRedirection();
 app.UseStaticFiles(); // wwwroot'taki dosyaları sunmak için
-
+app.MapHub<ExampleHub>("/examplehub");
 
 
 app.ConfigureCustomExceptionMiddleware();
@@ -196,7 +198,7 @@ app.UseRouting();
 app.UseCors("AllowReactApp"); // CORS middleware burada olmalı
 app.UseAuthentication();
 app.UseAuthorization();
-app.MapControllers(); 
+app.MapControllers();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

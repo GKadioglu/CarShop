@@ -200,20 +200,83 @@
     width: 100%;
     height: 100%;
   }
-  
-  /* Mobil uyum için */
-  @media (max-width: 768px) {
-    .car-details-container {
-      flex-direction: column; /* Mobilde dikey sıralama */
-    }
-  
-    .car-image-container,
-    .car-info-container {
-      width: 100%; /* Her iki container'ı da %100 genişliğe al */
-    }
-  
-    .car-info-container {
-      margin-top: 0px;
-      padding: 0px; /* Mobilde padding'i küçült */
-    }
+  /* Responsive Tasarım */
+
+/* Tablet ve daha küçük ekranlar için */
+@media (max-width: 1024px) {
+  .car-details-container {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
   }
+
+  .car-image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .car-image {
+    height: auto;
+    max-height: 400px;
+  }
+
+  .car-info-container {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+/* Mobil cihazlar için */
+@media (max-width: 768px) {
+  .car-info-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .car-info h1 {
+    font-size: 1.5em;
+  }
+
+  .car-info p {
+    font-size: 1em;
+  }
+
+  .btn-contactUs,
+  .btn-contact-make-an-offer {
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  .cart-logo {
+    max-width: 60%;
+  }
+}
+
+/* Küçük mobil cihazlar için */
+@media (max-width: 480px) {
+  
+
+  .car-info h1 {
+    font-size: 1.3em;
+  }
+
+  .car-info p {
+    font-size: 0.9em;
+  }
+
+  .btn-contactUs,
+  .btn-contact-make-an-offer {
+    width: 100%;
+    height: 35px;
+    font-size: 13px;
+  }
+
+  .cart-logo {
+    max-width: 50%;
+  }
+}
+
+  

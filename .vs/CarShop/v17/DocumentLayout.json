@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Casper\\Desktop\\CarShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{096A914B-D061-44FA-8809-02C9FD0E7F22}|CarShop.API\\CarShop.API.csproj|c:\\users\\casper\\desktop\\carshop\\carshop.api\\userprocess\\concrete\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{096A914B-D061-44FA-8809-02C9FD0E7F22}|CarShop.API\\CarShop.API.csproj|solutionrelative:carshop.api\\userprocess\\concrete\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{096A914B-D061-44FA-8809-02C9FD0E7F22}|CarShop.API\\CarShop.API.csproj|c:\\users\\casper\\desktop\\carshop\\carshop.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{096A914B-D061-44FA-8809-02C9FD0E7F22}|CarShop.API\\CarShop.API.csproj|solutionrelative:carshop.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{096A914B-D061-44FA-8809-02C9FD0E7F22}|CarShop.API\\CarShop.API.csproj|c:\\users\\casper\\desktop\\carshop\\carshop.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{096A914B-D061-44FA-8809-02C9FD0E7F22}|CarShop.API\\CarShop.API.csproj|solutionrelative:carshop.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0193E6AE-2524-4991-9688-44AC5CCFC5B1}|CarShop.API\\CarShop.API.csproj|c:\\users\\casper\\desktop\\carshop\\carshop.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0193E6AE-2524-4991-9688-44AC5CCFC5B1}|CarShop.API\\CarShop.API.csproj|solutionrelative:carshop.api\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserManager.cs",
-              "DocumentMoniker": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\UserProcess\\Concrete\\UserManager.cs",
-              "RelativeDocumentMoniker": "CarShop.API\\UserProcess\\Concrete\\UserManager.cs",
-              "ToolTip": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\UserProcess\\Concrete\\UserManager.cs",
-              "RelativeToolTip": "CarShop.API\\UserProcess\\Concrete\\UserManager.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAkwE8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T10:27:46.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "CarShop.API\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "CarShop.API\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAFwAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T10:27:06.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "CarShop.API\\Controllers\\AdminController.cs",
               "ToolTip": "C:\\Users\\Casper\\Desktop\\CarShop\\CarShop.API\\Controllers\\AdminController.cs",
               "RelativeToolTip": "CarShop.API\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAJYAAAAAAAAAAAAAwKsAAAAAAAAA",
+              "ViewState": "AQIAAPwAAAAAAAAAAAAiwBABAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-24T16:51:33.703Z",
+              "WhenOpened": "2025-03-17T18:23:53.201Z",
               "EditorCaption": ""
             }
           ]

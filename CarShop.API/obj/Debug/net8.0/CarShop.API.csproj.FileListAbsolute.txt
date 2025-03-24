@@ -473,3 +473,8 @@ C:\Users\Casper\Desktop\CarShop\CarShop.API\obj\Debug\net8.0\CarShop.API.genrunt
 C:\Users\Casper\Desktop\CarShop\CarShop.API\obj\Debug\net8.0\ref\CarShop.API.dll
 C:\Users\Casper\Desktop\CarShop\CarShop.API\bin\Debug\net8.0\package.json
 C:\Users\Casper\Desktop\CarShop\CarShop.API\bin\Debug\net8.0\package-lock.json
+C:\Users\Casper\Desktop\CarShop\CarShop.API\obj\Debug\net8.0\CarShop.API.sourcelink.json
+C:\Users\Casper\Desktop\CarShop\CarShop.API\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Casper\Desktop\CarShop\CarShop.API\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Casper\Desktop\CarShop\CarShop.API\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Casper\Desktop\CarShop\CarShop.API\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll

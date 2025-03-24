@@ -5,11 +5,6 @@ C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\appsettings.json
 C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\global.json
 C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\CarShop.API.staticwebassets.runtime.json
 C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\CarShop.API.exe
-C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\client-app\build\asset-manifest.json
-C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\client-app\build\manifest.json
-C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\client-app\package-lock.json
-C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\client-app\package.json
-C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\client-app\public\manifest.json
 C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\package-lock.json
 C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\package.json
 C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\CarShopUI.staticwebassets.runtime.json
@@ -484,3 +479,11 @@ C:\Users\Casper\Desktop\CarShop\CarShopUI\obj\Debug\net8.0\refint\CarShopUI.dll
 C:\Users\Casper\Desktop\CarShop\CarShopUI\obj\Debug\net8.0\CarShopUI.pdb
 C:\Users\Casper\Desktop\CarShop\CarShopUI\obj\Debug\net8.0\CarShopUI.genruntimeconfig.cache
 C:\Users\Casper\Desktop\CarShop\CarShopUI\obj\Debug\net8.0\ref\CarShopUI.dll
+C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\build\asset-manifest.json
+C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\build\manifest.json
+C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\public\manifest.json
+C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\Casper\Desktop\CarShop\CarShopUI\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\Casper\Desktop\CarShop\CarShopUI\obj\Debug\net8.0\CarShopUI.sourcelink.json

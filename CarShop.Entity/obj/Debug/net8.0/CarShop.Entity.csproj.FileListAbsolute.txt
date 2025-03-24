@@ -15,3 +15,4 @@ C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\refint\CarShop.E
 C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\CarShop.Entity.pdb
 C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\CarShop.Entity.genruntimeconfig.cache
 C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\ref\CarShop.Entity.dll
+C:\Users\Casper\Desktop\CarShop\CarShop.Entity\obj\Debug\net8.0\CarShop.Entity.sourcelink.json

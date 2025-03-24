@@ -16,6 +16,8 @@ html, body {
   display: flex;
   justify-content: space-between; /* Sol ve sağ tarafları ayırır */
   align-items: center;
+  position: relative;
+
 }
 
 .navbar-logo {
@@ -107,114 +109,118 @@ html, body {
   background-color: #e67e22; /* Hover buton rengi */
 }
 
-@media screen and (max-width: 1200px) {
-  .navbar-link {
-    font-size: 14px;
-    padding: 8px 8px;
-    margin-left: 15px;
-  }
-
-  .search-input {
-    width: 150px;
-    font-size: 13px;
-  }
-
-  .search-button {
-    padding: 6px 10px;
-  }
-
-  .navbar-logo img {
-    max-height: 70px;
-  }
+/* Hamburger Menüsü */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 20px;
 }
 
-@media screen and (max-width: 992px) {
-  .navbar-link, .navbar-link-left {
-    font-size: 12px;
-    padding: 6px 6px;
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start; /* Tüm başlıkları sola hizala */
+    padding: 10px;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
     margin-left: 10px;
   }
 
-  .search-input {
-    width: 130px;
-    font-size: 12px;
+  .hamburger div {
+    width: 30px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 4px 0;
   }
 
-  .search-button {
-    padding: 5px 8px;
+  .navbar-logo {
+    top: -9px;
   }
 
-  .navbar-logo img {
-    max-height: 60px;
-    margin-right: 30px;
-
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar {
-    padding: 8px 15px;
+  /* Menü kapalıyken bağlantıları gizle */
+  .navbar-left,
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0; 
+    margin: 0;
   }
 
-  .navbar-link {
-    font-size: 11px;
-    padding: 5px 5px;
-    margin-left: 8px;
+  /* Menü açıldığında göster */
+  .navbar-left.open,
+  .navbar-right.open {
+    display: flex;
+    width: 100%;
+  }
+
+  /* Menü başlıklarını hizala */
+  .navbar-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-list li {
+    width: 100%;
   }
   .navbar-link-left {
-    font-size: 10px;
-    padding: 4px 4px;
-    margin-left: 0px;
-    margin: 0;
-    padding-left: 0px;
-    border-left: 0;
+    margin-left: -12px;
   }
-  .search-input {
-    width: 110px;
-    font-size: 11px;
-  }
-
-  .search-button {
-    padding: 4px 6px;
-  }
-
-  .navbar-logo img {
-    max-height: 50px;
-    margin-right: 60px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .navbar {
-    padding: 5px 10px;
-  }
-
-  .navbar-link{
-    font-size: 9px;
-    padding: 4px 4px;
-    margin-left: 5px;
-  }
+  .navbar-link, 
   .navbar-link-left {
-    font-size: 9px;
-    padding: 4px 4px;
-    margin-left: 0px;
-    margin: 0;
-    padding-left: 0px;
+    display: block;
+    width: 100%;
+    padding: 13px 10px; /* Hem sol hem sağ boşluğu eşitle */
+    text-align: left;
+    font-weight: 400;
+  }
+  
+  .navbar-link-giris-yap {
+    margin-left: -5px;
+  }
+
+  /* Arama çubuğunu da hizala */
+  .search-bar {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    gap: 5px;
   }
 
   .search-input {
-    width: 90px;
-    font-size: 10px;
+    flex: 1; /* Arama kutusunun kalan alanı kaplamasını sağla */
+    width: 280px;
   }
 
   .search-button {
-    padding: 3px 5px;
+    margin-top: 0; /* Daha önce eklenen üst boşluğu kaldır */
+    width: auto;
+    white-space: nowrap; /* Butonun içeriğinin taşmasını engelle */
   }
-
-  .navbar-logo img {
-    max-height: 25px;
-    margin-right: 70px;
+  .navbar-link:hover, .navbar-link-left:hover{
+    color: gold; 
+    background-color: rgba(255, 255, 255, 0.231); 
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.4); 
+    transform: scale(1.00); 
   }
 }
-
 

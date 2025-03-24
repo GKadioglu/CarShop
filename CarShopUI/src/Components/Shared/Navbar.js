@@ -6,11 +6,11 @@ import logo from "../Images/car shop (2)-Photoroom.png";
 
 function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false); // Hamburger için state
   const navigate = useNavigate();
-  const { isAuthenticated, logout, userName, role } = useAuth(); // role burada alınacak
+  const { isAuthenticated, logout, userName, role } = useAuth();
 
-  useEffect(() => {
-  }, [isAuthenticated, userName, role]);
+  useEffect(() => {}, [isAuthenticated, userName, role]);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -19,6 +19,7 @@ function Navbar() {
   const handleSearchSubmit = (event) => {
     event.preventDefault();
     navigate(`/search?query=${searchTerm}`);
+    setMenuOpen(false); // Menü açıkken arama yapınca menü kapansın
   };
 
   const handleLogout = () => {
@@ -27,23 +28,33 @@ function Navbar() {
     navigate("/");
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <nav className="navbar">
-      <div className="navbar-left">
-    
-        <ul className={`navbar-list `}>
+    <nav className={`navbar ${menuOpen ? "active" : ""}`}>
+      {/* Hamburger Menü */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <div className={`navbar-left ${menuOpen ? "open" : ""}`}>
+        <ul className="navbar-list">
           <li>
-            <Link className="navbar-link-left" to="/">
+            <Link className="navbar-link-left" to="/" onClick={() => setMenuOpen(false)}>
               Ana Sayfa
             </Link>
           </li>
           <li>
-            <Link className="navbar-link-left" to="/category">
+            <Link className="navbar-link-left" to="/category" onClick={() => setMenuOpen(false)}>
               Kategoriler
             </Link>
           </li>
           <li>
-            <Link className="navbar-link-left" to="/about">
+            <Link className="navbar-link-left" to="/about" onClick={() => setMenuOpen(false)}>
               Hakkımızda
             </Link>
           </li>
@@ -51,27 +62,24 @@ function Navbar() {
       </div>
 
       <div className="navbar-logo" style={{ cursor: "default" }}>
-        <Link to="/">
+        <Link to="/" onClick={() => setMenuOpen(false)}>
           <img src={logo} alt="Logo" />
         </Link>
       </div>
 
-      <div className="navbar-right">
+      <div className={`navbar-right ${menuOpen ? "open" : ""}`}>
         {isAuthenticated ? (
           <>
-            {role === "admin" ? ( // Role göre admin kontrolü
-              <Link className="navbar-link" to="/admin">
+            {role === "admin" ? (
+              <Link className="navbar-link" to="/admin" onClick={() => setMenuOpen(false)}>
                 Admin Paneli
               </Link>
             ) : (
-              <Link className="navbar-link" to={`/myAccount/${userName}`}>
+              <Link className="navbar-link" to={`/myAccount/${userName}`} onClick={() => setMenuOpen(false)}>
                 Hesabım
               </Link>
             )}
-            <Link
-              className="navbar-link navbar-register"
-              onClick={handleLogout}
-            >
+            <Link className="navbar-link navbar-register" onClick={() => { handleLogout(); setMenuOpen(false); }}>
               Çıkış Yap
             </Link>
             <div className="search-bar">
@@ -91,10 +99,10 @@ function Navbar() {
           </>
         ) : (
           <>
-            <Link className="navbar-link" to="/login">
+            <Link className="navbar-link navbar-link-giris-yap" to="/login" onClick={() => setMenuOpen(false)}>
               Giriş Yap
             </Link>
-            <Link className="navbar-link navbar-register" to="/register">
+            <Link className="navbar-link navbar-register" to="/register" onClick={() => setMenuOpen(false)}>
               Kayıt Ol
             </Link>
             <div className="search-bar">
