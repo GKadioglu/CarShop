@@ -28,7 +28,6 @@ function AdminNotification() {
       });
 
       if (response.ok) {
-        const data = await response.json();
         setResponseMessage("Bildirim başarıyla gönderildi!");
 
         setTitle("");

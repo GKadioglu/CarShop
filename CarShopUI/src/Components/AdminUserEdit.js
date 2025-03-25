@@ -58,6 +58,7 @@ function AdminUserEdit() {
             <img
               src={profile} // Profil resmi statik
               className="profile-picture"
+              alt=""
             />
             <h3>
               {selectedUser.firstName} {selectedUser.lastName}

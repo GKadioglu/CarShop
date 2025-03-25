@@ -20,7 +20,7 @@ function MyAccount() {
     userName: "",
   });
   const [favoriteCars, setFavoriteCars] = useState([]);
-  const [visibleCars, setVisibleCars] = useState(2);
+  const [visibleCars] = useState(2);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [error, setError] = useState("");
   const [messages, setMessages] = useState([]);

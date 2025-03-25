@@ -55,14 +55,14 @@ function About() {
 
         {/* Resim galerisi */}
         <div className="gallery">
-          <img src={gallery1} />
-          <img src={gallery2} />
-          <img src={gallery3} />
+          <img src={gallery1} alt=""/>
+          <img src={gallery2} alt=""/>
+          <img src={gallery3} alt=""/>
         </div>
         <div className="gallery">
-        <img src={gallery4} />
-          <img src={gallery5} />
-          <img src={gallery6} />
+        <img src={gallery4} alt=""/>
+          <img src={gallery5} alt=""/>
+          <img src={gallery6} alt=""/>
         </div>
 
         {/* Adres */}

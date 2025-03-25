@@ -81,6 +81,7 @@ function HighlightedCar() {
             <strong>Kategori:</strong> İlgi Görenler
           </p>
           <img
+          alt=""
             src={logo}
             className="magazine-logo"
             style={{ cursor: "default" }}

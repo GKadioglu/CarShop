@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "./Css/HomePage.css";
-import { FaHeart, FaArrowUp, FaChevronCircleUp  } from "react-icons/fa";
+import { FaHeart, FaChevronCircleUp  } from "react-icons/fa";
 import HighlightedCar from "./HighlightedCar";
 import HomePageNews from "./HomePageNews";
 import { useAuth } from "./Shared/AuthContext";

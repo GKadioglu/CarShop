@@ -31,9 +31,9 @@ function Help() {
         <h2 className="helppage-guides-title">Yardımcı Kılavuzlar</h2>
         <p>Adım adım rehberler ve videolar ile araçları nasıl keşfedeceğinizi öğrenin:</p>
         <ul className="helppage-guides-list">
-          <li><a  className= "helppage-guides-list-li" href="#">Araç Arama ve Filtreleme Kılavuzu</a></li>
-          <li><a  className= "helppage-guides-list-li" href="#">Favorilere Araç Ekleme ve Yönetme</a></li>
-          <li><a className= "helppage-guides-list-li"  href="#">Hesap ve Üyelik Ayarları</a></li>
+          <li><a  className= "helppage-guides-list-li" href="/">Araç Arama ve Filtreleme Kılavuzu</a></li>
+          <li><a  className= "helppage-guides-list-li" href="/">Favorilere Araç Ekleme ve Yönetme</a></li>
+          <li><a className= "helppage-guides-list-li"  href="/">Hesap ve Üyelik Ayarları</a></li>
         </ul>
       </section>
 

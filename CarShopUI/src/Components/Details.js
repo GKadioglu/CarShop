@@ -2,15 +2,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./Css/Details.css";
-import { Suspense } from "react";
 import logo from "../Components/Images/car shop (2)-Photoroom.png";
-import { OrbitControls, useGLTF } from "@react-three/drei";
 
 function CarDetails() {
   const { carId } = useParams(); 
   const [carDetails, setCarDetails] = useState(null);
   const [error, setError] = useState(null);
-  const [modelUrl, setModelUrl] = useState("");
   const navigate = useNavigate(); 
 
   useEffect(() => {
@@ -29,11 +26,6 @@ function CarDetails() {
   }, [carId]);
 
  
-
-  function Model({ modelUrl }) {
-    const { scene } = useGLTF(modelUrl);
-    return <primitive object={scene} scale={8.5} />;
-  }
 
   if (error) {
     return <div className="error-message">Error: {error}</div>;
@@ -85,7 +77,7 @@ function CarDetails() {
           <button className="btn-contact-make-an-offer" onClick={handleMakeAnOffer}>
             Teklif Ver
           </button>
-          <img src={logo} className="cart-logo" style={{ cursor: "default" }} />
+          <img src={logo} alt="" className="cart-logo" style={{ cursor: "default" }} />
         </div>
       </div>
     </div>

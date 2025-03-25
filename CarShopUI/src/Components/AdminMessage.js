@@ -7,7 +7,7 @@ function AdminMessage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedMessage, setSelectedMessage] = useState(null);
-  const [sender, setSender] = useState("admin"); 
+  const [sender] = useState("admin"); 
   const [receiver, setReceiver] = useState(""); 
   const [message, setMessage] = useState(""); 
 

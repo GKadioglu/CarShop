@@ -33,7 +33,8 @@ function Blog() {
   
   useEffect(() => {
     setVisiblePages(Array.from({ length: endPage - startPage + 1 }, (_, index) => startPage + index));
-  }, [currentPage, pageGroup, pageCount]);
+  }, [currentPage, pageGroup, pageCount, endPage, startPage]); 
+  
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
