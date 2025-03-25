@@ -6,7 +6,7 @@
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build",
-      "program": "C:/Users/Casper/Desktop/CarShop/CarShop.UI/bin/Debug/net8.0/CarShop.UI.dll",
+      "program": "C:/Users/Casper/Desktop/CarShop/CarShop.API/bin/Debug/net8.0/CarShop.API.dll",
       "args": [],
       "cwd": "${workspaceFolder}",
       "stopAtEntry": false,
