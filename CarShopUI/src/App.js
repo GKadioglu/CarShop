@@ -57,7 +57,14 @@ function App() {
             <Route path="/notifications" element={<Notifications />} />
             <Route path="/help" element={<Help />} />
             <Route path="/accountSettings" element={<AccountSettings />} />
-            <Route path="/admin" element={<Admin />} />
+            <Route
+              path="/admin"
+              element={
+                <PrivateRoute roles={["admin"]}>
+                  <Admin />
+                </PrivateRoute>
+              }
+            />
             <Route
               path="/admin/caredit"
               element={
@@ -66,7 +73,7 @@ function App() {
                 </PrivateRoute>
               }
             />
-              <Route
+            <Route
               path="/admin/replyoffer"
               element={
                 <PrivateRoute roles={["admin"]}>
@@ -74,7 +81,7 @@ function App() {
                 </PrivateRoute>
               }
             />
-             <Route
+            <Route
               path="/admin/messages"
               element={
                 <PrivateRoute roles={["admin"]}>

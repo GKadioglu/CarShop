@@ -221,3 +221,108 @@
   color: white;
  
 }
+/* Tablet ve küçük ekranlar için (1024px ve altı) */
+@media (max-width: 1024px) {
+  .admin-message-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .admin-message-list,
+  .admin-message-detail {
+    width: 100%;
+    max-height: none;
+  }
+
+  .admin-message-list {
+    margin-bottom: 20px;
+  }
+
+  .admin-message-item {
+    padding: 8px;
+    font-size: 1rem;
+  }
+
+  .admin-message-reply-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .admin-message-submit {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .admin-message-reply-container textarea {
+    height: 100px;
+  }
+
+  .admin-message-car-img {
+    max-width: 80%;
+  }
+
+  .admin-message-content {
+    margin-left: 0;
+  }
+}
+
+/* Küçük ekranlar (mobil) için (768px ve altı) */
+@media (max-width: 768px) {
+  .admin-message-container {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+  }
+
+  .admin-message-panel-title {
+    font-size: 1.8rem;
+  }
+
+  .admin-message-list {
+    margin-left: 0px;
+  }
+  .admin-message-list,
+  .admin-message-detail {
+    margin-top: 0px;
+    padding-left: 0px;
+    margin-left: 0px;
+    width: 95%;
+    max-height: none;
+  }
+
+  .admin-message-item {
+    padding: 3px;
+    font-size: 0.9rem;
+  }
+
+  .admin-message-detail {
+    padding: 15px;
+  }
+
+  .admin-message-car-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .admin-message-reply-container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .admin-message-input-group {
+    flex-direction: column;
+  }
+
+  .admin-message-input-group input {
+    width: 95%;
+  }
+
+  .admin-message-reply-container textarea {
+    height: 80px;
+  }
+
+  .admin-message-submit {
+    width: 100%;
+    margin-left: 0;
+  }
+}

@@ -59,3 +59,31 @@
     color: gold;
     margin-bottom: 0px;
   }
+
+  /* Mobil uyumluluk için medya sorgusu */
+@media (max-width: 600px) {
+  .admin-notification-page {
+      width: 95%;
+      align-items: center;
+  }
+  
+  .admin-notification-page-form {
+    text-align: center;
+    margin-left: -20px;
+    
+  }
+  
+  .admin-notification-page-form-input, .admin-notification-page-form-textarea {
+      font-size: 14px;
+      margin-left: -10px;
+  }
+  
+  .admin-notification-page-form-button {
+      padding: 10px;
+      font-size: 14px;
+  }
+  
+  .admin-notification-page-title {
+      font-size: 30px;
+  }
+}

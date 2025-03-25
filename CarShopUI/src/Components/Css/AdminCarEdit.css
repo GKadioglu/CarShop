@@ -240,4 +240,82 @@
   margin-bottom: 10px;
 }
 
+@media (max-width: 1200px) {
+  .admin-car-edit-upper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-car-edit-card {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .admin-car-edit-menu {
+    max-height: 300px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .admin-new-car {
+    grid-template-columns: 1fr 1fr; /* Tabletlerde 2 sütun */
+  }
+
+  .admin-new-car-title {
+    grid-column: span 2;
+  }
+
+  .add-new-car-button {
+    grid-column: 2 / span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-new-car {
+    grid-template-columns: 1fr; /* Mobilde tek sütun */
+  }
+
+  .admin-new-car-title {
+    grid-column: span 1;
+  }
+
+  .add-new-car-button {
+    grid-column: 1 / span 1;
+    width: 100%;
+  }
+
+  .admin-car-edit-menu {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-new-car-title {
+    padding: 10px 10px; /* İç boşluk ekleyerek daha belirgin hale getir */
+    border-radius: 8px; /* Köşeleri yuvarlat */
+    background-color: rgba(2, 2, 2, 0.62); /* Hafif karartma */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Hafif çerçeve */    display: inline-block; /* Sadece başlığın genişliği kadar arka plan uygula */
+  }
+  
+  .admin-car-edit-menu-item {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .admin-card-edit-title {
+    font-size: 1.2rem;
+  }
+
+  .admin-price-edit-text {
+    font-size: 1rem;
+  }
+
+  .delete-car-btn {
+    right: -30px;
+    height: 30px;
+    width: 50px;
+    font-size: 12px;
+  }
+}
 

@@ -261,7 +261,7 @@ function MyAccount() {
       <div className="account-left-side">
         {/* Hesap Bilgileri */}
         <div className="account-user-info">
-          <h2>Hesap Bilgileriniz</h2>
+          <h2 className="account-user-info-title">Hesap Bilgileriniz</h2>
           <div className="account-user-details">
             <img
               className="account-user-profile-photo"

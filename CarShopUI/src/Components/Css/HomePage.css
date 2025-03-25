@@ -1,4 +1,7 @@
-
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
 /* Ana sayfa container'ı */
 .home-page {
     text-align: center;

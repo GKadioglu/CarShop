@@ -184,3 +184,83 @@
   background-color: #ccc; /* Disabled durumunda arka plan rengi */
   cursor: not-allowed; /* Disabled butonun işaretçisi */
 }
+/* Responsive Tasarım */
+@media (max-width: 1200px) {
+  .user-panel-myoffer-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .user-panel-myoffer-section {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-panel-myoffer-container {
+    padding: 15px;
+  }
+
+  .user-panel-myoffer-title {
+    font-size: 28px;
+  }
+
+  .user-panel-myoffer-subtitle-left,
+  .user-panel-myoffer-subtitle-right {
+    font-size: 18px;
+  }
+
+  .user-panel-myoffer-item-left,
+  .user-panel-myoffer-item-right {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .user-panel-myoffer-img-left,
+  .user-panel-myoffer-img-right {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .user-panel-myoffer-item-left-p,
+  .user-panel-myoffer-item-right-p {
+    margin-left: 0;
+  }
+
+  .button-container-left,
+  .button-container-right {
+    justify-content: space-between;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-panel-myoffer-title {
+    font-size: 25px;
+  }
+
+  .user-panel-myoffer-subtitle-left,
+  .user-panel-myoffer-subtitle-right {
+    font-size: 16px;
+  }
+
+  .user-panel-myoffer-img-left,
+  .user-panel-myoffer-img-right {
+    max-width: 200px;
+  }
+
+  .button-container-left,
+  .button-container-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-user-offer-pref-left,
+  .btn-user-offer-next-left,
+  .btn-user-offer-prev-right,
+  .btn-user-offer-next-right {
+    width: 100%;
+    padding: 10px;
+  }
+}

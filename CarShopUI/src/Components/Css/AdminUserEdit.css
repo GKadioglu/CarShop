@@ -77,3 +77,93 @@
   .user-card p {
     margin: 5px 0;
   }
+
+  /* Mobil Ekranlar (Maksimum 768px) */
+@media (max-width: 768px) {
+  .admin-user-list-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .user-list {
+    width: 100%;
+    border-right: none;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .user-list ul {
+    padding: 0;
+  }
+
+  .user-list li {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .user-details {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .user-card {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .user-card img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Tablet ve Küçük Laptoplar (Maksimum 1024px) */
+@media (max-width: 1024px) {
+  .admin-user-list-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-list {
+    width: 80%;
+    border-right: none;
+  }
+
+  .user-details {
+    width: 80%;
+  }
+
+  .user-card {
+    max-width: 100%;
+  }
+}
+
+/* Küçük Mobil Ekranlar (Maksimum 480px) */
+@media (max-width: 480px) {
+  .user-list {
+    width: 100%;
+  }
+
+  .user-list h3 {
+    font-size: 18px;
+  }
+
+  .user-list li {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .user-card h3 {
+    font-size: 18px;
+  }
+
+  .user-card p {
+    font-size: 14px;
+  }
+
+  .user-card img {
+    width: 100px;
+    height: 100px;
+  }
+}

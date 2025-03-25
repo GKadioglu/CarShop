@@ -387,44 +387,167 @@ button.account-btn-edit:hover, .account-btn-save:hover {
     font-size: 15px; /* Yazı boyutu */
     font-weight: bold; /* Kalın yazı */
   }
-  @media (max-width: 768px) {
+ /* RESPONSIVE TASARIM */
+@media (max-width: 1100px) {
+    .account-user-info-title {
+        text-align: center;
+    }
     .my-account {
-        flex-direction: column;
+        flex-direction: column; /* Sol ve sağ bölümleri üst üste getiriyoruz */
+        gap: 10px;
+        padding: 10px;
     }
+  
     .account-left-side, .account-right-side {
-        width: 100%;
+        width: 100%; /* Her iki tarafı tam genişlik yapıyoruz */
     }
-    .account-menu-cards {
-        grid-template-columns: repeat(2, 1fr);
+  
+    /* Kullanıcı Bilgileri */
+    .account-user-info {
+        margin: 0 auto;
+        padding: 15px;
+        width: 95%;
     }
-}
-@media (max-width: 1024px) {
-    .my-account {
-        flex-direction: column;
-    }
-    .account-left-side, .account-right-side {
-        width: 100%;
-    }
-    .account-menu-cards {
-        grid-template-columns: repeat(3, 1fr);
+  
+    .account-user-info .account-user-details {
+        flex-direction: column; /* Profil bilgilerini dikey hizala */
         align-items: center;
     }
-}
-@media (max-width: 576px) {
-    .my-account {
-        flex-direction: column;
-    }
-    .account-left-side, .account-right-side {
-        width: 100%;
-    }
-    .account-menu-cards {
-        grid-template-columns: repeat(2, 1fr);
-        
-    }
-    .account-user-info {
-        flex-direction: column;
-    }
+  
     .account-user-info .account-user-profile-photo {
-        height: 80px;
+        margin: 0 auto;
+        width: 150px;
+        height: 110px;
+    }
+  
+    .account-btn-save {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+  
+    /* Favori Araçlar */
+    .favorite-cars {
+        width: 95%;
+        margin: 10px auto;
+    }
+  
+    .account-favorite-cars-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+  
+    .account-car-card {
+        width: 150px; /* Küçük ekranlarda kartları küçült */
+        height: auto;
+    }
+  
+    .account-car-card img {
+        height: 100px;
+    }
+  
+    /* Menü Kartları */
+    .account-menu-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 sütunlu olacak */
+        gap: 10px;
+        width: 100%;
+        justify-items: center; /* Kartları ortalar */
+        place-items: center; /* Ortalanmasını sağlar */
+        padding: 10px;
+    }
+  
+    .account-card {
+        width: 100%;
+        max-width: 180px; /* Ekran boyutuna göre genişlik ayarı */
+        height: auto;
+    }
+  
+    /* Mesajlar */
+    .account-messages {
+        width: 95%;
+        margin: 10px auto;
+    }
+  
+    .message-switch-container {
+        top: 20%;
+        right: 10px;
+        transform: translateY(-50%);
     }
 }
+
+/* 500px ve altındaki ekranlar için özel düzenleme */
+@media (max-width: 540px) {
+    .account-menu-cards {
+        margin-left: -10px;
+        gap: 20px; /* Kartlar arasına daha fazla boşluk ekle */
+    }
+
+    .account-card {
+        max-width: 70%; /* Kartların genişliğini ekran boyutuna göre ayarla */
+    }
+
+    .account-favorite-cars-list {
+        flex-direction: column; /* Araç kartlarını dikey hizala */
+        gap: 15px; /* Araçlar arasında boşluk bırak */
+    }
+
+    .account-car-card {
+        width: 100%;
+        max-width: 200px; /* Mobilde kartlar biraz daha büyük olabilir */
+    }
+  
+    .account-car-card img {
+        height: auto;
+    }
+}
+  
+/* MOBİL CİHAZLAR (max-width: 768px) */
+@media (min-width:540px) and (max-width: 768px) {
+    .account-user-info {
+        width: 100%;
+        padding: 10px;
+    }
+  
+    .account-menu-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 sütunlu düzen */
+        gap: 10px;
+        padding: 10px;
+        justify-items: center; /* Kartları ortalar */
+        place-items: center;
+    }
+  
+    .account-favorite-cars-list {
+        flex-direction: column; /* Araç kartlarını dikey hizala */
+    }
+  
+    .account-car-card {
+        width: 100%;
+        max-width: 180px; /* Mobilde kartlar biraz daha büyük olabilir */
+    }
+  
+    .account-car-card img {
+        height: auto;
+    }
+  
+    .account-messages {
+        width: 100%;
+        padding: 10px;
+    }
+  
+    .message-switch-container {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        text-align: center;
+    }
+  
+    .notification-badge-offer,
+    .favorite-badge,
+    .message-count-notification {
+        font-size: 12px;
+        padding: 3px 7px;
+    }
+}
+

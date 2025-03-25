@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { fetchWithToken } from "./Shared/api";
 import { useAuth } from "./Shared/AuthContext";
 import "./Css/Notifications.css";
@@ -8,6 +9,13 @@ function Notifications() {
   const [notifications, setNotifications] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!token || !userName) {
+      navigate("/login");
+    }
+  }, [token, userName, navigate]);
 
   useEffect(() => {
     if (!token || !userName) return; 

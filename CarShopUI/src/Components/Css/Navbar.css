@@ -194,7 +194,7 @@ html, body {
     font-weight: 400;
   }
   
-  .navbar-link-giris-yap {
+  .navbar-link-giris-yap, .navbar-myaccount, .navbar-admin {
     margin-left: -5px;
   }
 

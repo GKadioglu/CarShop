@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "./Shared/AuthContext";
+import { useNavigate } from "react-router-dom";
 import { fetchWithToken } from "./Shared/api";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "./Css/Agreements.css";
 
 function Agreements() {
+  const navigate = useNavigate();
+
   const { email } = useAuth();
   const [offers, setOffers] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -12,6 +15,11 @@ function Agreements() {
   const [currentAcceptedIndex, setCurrentAcceptedIndex] = useState(0);
   const [currentRejectedIndex, setCurrentRejectedIndex] = useState(0);
 
+  useEffect(() => {
+    if (!email) {
+      navigate("/login");
+    }
+  }, [email, navigate]);
   useEffect(() => {
     const fetchOffers = async () => {
       try {
@@ -151,9 +159,8 @@ function Agreements() {
               <p className="user-panel-myoffer-item-right-p">
                 <strong>
                   {rejectedOffers[currentRejectedIndex]?.userMakeOffers?.[0]
-                    ?.userMakeOfferCars?.[0]?.brand  || "Bilinmiyor"} 
-                </strong>
-                {" "}
+                    ?.userMakeOfferCars?.[0]?.brand || "Bilinmiyor"}
+                </strong>{" "}
                 {rejectedOffers[currentRejectedIndex]?.userMakeOffers?.[0]
                   ?.userMakeOfferCars?.[0]?.model || "Bilinmiyor"}
               </p>

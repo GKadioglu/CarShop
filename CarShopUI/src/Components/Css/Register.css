@@ -132,62 +132,44 @@
   font-size: 16px;
   margin-top: 10px;
 }
-/* Ekran genişliği 768px ve altındaki cihazlar için responsive düzenleme */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .register-container h2 {
+    margin-top: 20px; /* İhtiyaca göre artırabilirsiniz */
+  }
+  
   .register-container {
-    flex-direction: column; /* Form ve araç alanlarını üst üste yerleştiriyoruz */
-    height: auto; /* Yüksekliği auto yaparak daha esnek hale getiriyoruz */
+    flex-direction: column;
+    height: auto;
+    padding: 0;
   }
 
   .form-register-section,
   .car-register-section {
-    flex: 0 0 100%; /* Her bir bölüm tam genişlikte olacak */
-    margin-bottom: 20px; /* Aralarındaki boşlukları artırıyoruz */
+    flex: 1 1 100%;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    margin: 0;
   }
 
-  .submit-register-button {
-    width: 60%; /* Butonun genişliğini daha fazla yapıyoruz */
-    height: 50px; /* Buton yüksekliğini artırıyoruz */
-    font-size: 18px; /* Font büyüklüğünü arttırıyoruz */
+  .form-register-group input {
+    max-width: 100%;
   }
 
-  .form-register-group input,
-  .form-register-group select {
-    font-size: 14px; /* Ekran küçüldükçe yazı boyutunu küçültüyoruz */
-    padding: 12px; /* Input alanlarının iç boşluklarını artırıyoruz */
+  .car-register-section {
+    margin-top: -120px; /* 3D modeli daha yukarı al */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* İçeriği ortala */
+    align-items: center; /* Dikey hizalama */
   }
 
-  .car-register-container img {
-    width: 80%; /* Görselin genişliğini küçültüyoruz */
-    animation: none; /* Animasyonu kaldırıyoruz */
-  }
-}
-
-/* Ekran genişliği 480px ve altındaki cihazlar için responsive düzenleme */
-@media (max-width: 480px) {
-  .form-register-section h2,
-  .car-register-section h2 {
-    font-size: 18px; /* Başlık font boyutunu küçültüyoruz */
-    margin-bottom: 15px; /* Başlıklar arasındaki boşluğu azaltıyoruz */
-  }
-
-  .submit-register-button {
-    width: 80%; /* Buton genişliğini daha da artırıyoruz */
-    height: 50px; /* Buton yüksekliğini koruyoruz */
-    font-size: 16px; /* Font büyüklüğünü küçültüyoruz */
-  }
-
-  .form-register-group input,
-  .form-register-group select {
-    font-size: 12px; /* Input alanı yazı boyutunu daha da küçültüyoruz */
-    padding: 10px; /* İç boşlukları daha da azaltıyoruz */
-  }
-
-  .car-register-container {
-    width: 100%; /* Araç alanının genişliğini %100 yapıyoruz */
-  }
-
-  .car-register-container img {
-    width: 90%; /* Görselin genişliğini %90 yapıyoruz */
+  .car-register-section canvas {
+    width: 100vw; /* Tam ekran genişliği */
+    max-width: 100%; /* Container dışına taşmayı önler */
+    height: 200px;
+    display: block;
+    margin: 0;
+    padding: 0;
   }
 }

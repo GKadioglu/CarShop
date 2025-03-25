@@ -71,11 +71,11 @@ function Navbar() {
         {isAuthenticated ? (
           <>
             {role === "admin" ? (
-              <Link className="navbar-link" to="/admin" onClick={() => setMenuOpen(false)}>
+              <Link className="navbar-link navbar-admin" to="/admin" onClick={() => setMenuOpen(false)}>
                 Admin Paneli
               </Link>
             ) : (
-              <Link className="navbar-link" to={`/myAccount/${userName}`} onClick={() => setMenuOpen(false)}>
+              <Link className="navbar-link navbar-myaccount" to={`/myAccount/${userName}`} onClick={() => setMenuOpen(false)}>
                 Hesabım
               </Link>
             )}

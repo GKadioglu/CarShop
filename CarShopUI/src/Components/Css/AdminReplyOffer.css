@@ -197,3 +197,125 @@
   background: rgb(158, 26, 26);
 
 }
+
+/* Mobil ve tabletler için */
+@media (max-width: 1024px) {
+  .admin-reply-offer-panel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-reply-offer-list,
+  .admin-reply-offer-detail {
+    width: 90%;
+    max-height: none;
+  }
+
+  .admin-reply-offer-list {
+    margin-bottom: 20px;
+  }
+
+  .admin-reply-offer-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .admin-reply-offer-detail-car {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .admin-reply-offer-car-info {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .admin-reply-offer-filtered {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .admin-reply-accepted
+   {
+    width: 97%;
+    margin-left: 0px;
+  }
+  .admin-reply-rejected 
+  {
+    width: 97%;
+    margin-left: 0px;
+  }
+}
+
+/* Küçük ekranlar (mobil) için */
+@media (max-width: 768px) {
+  .admin-reply-offer-panel {
+    padding: 10px;
+  }
+
+  .admin-reply-offer-list-title {
+    font-size: 1.5rem;
+  }
+
+  .admin-reply-offer-item {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .admin-reply-offer-detail {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .admin-reply-offer-detail-left {
+    text-align: center;
+  }
+
+  .admin-reply-offer-button-left,
+  .admin-reply-offer-button-right {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .admin-reply-offer-car-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .admin-reply-offer-filtered {
+    padding: 10px;
+  }
+
+  .admin-reply-accepted-h2,
+  .admin-reply-rejected-h2 {
+    font-size: 1.4rem;
+  }
+}
+
+
+/* Küçük telefon ekranları için (max 480px) */
+@media (max-width: 480px) {
+  .admin-reply-offer-list-title {
+    font-size: 1.5rem;
+  }
+
+  .admin-reply-offer-item {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .admin-reply-offer-detail {
+    font-size: 0.9rem;
+  }
+
+  .admin-reply-offer-detail-price {
+    font-size: 1rem;
+  }
+
+  .admin-reply-offer-button-left,
+  .admin-reply-offer-button-right {
+    font-size: 0.8rem;
+    height: 30px;
+  }
+}

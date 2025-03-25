@@ -3,22 +3,24 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  position: relative; /* Arka planın gölgelenmesi için */
-  padding: 0;
+  position: relative;
+  flex-direction: column;
 }
 
 .contact-page-content {
   display: flex;
+  flex-direction: row;
   max-width: 1200px;
   width: 100%;
   gap: 30px;
   border-radius: 8px;
-  background-color: rgba(2, 2, 2, 0.50); /* Hafif karartma */
-  border: 1px solid rgba(0, 0, 0, 0.3); /* Hafif çerçeve */
+  background-color: rgba(2, 2, 2, 0.50);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 20px;
   position: relative;
-  z-index: 1; /* Diğer öğelerin üzerinde olmasını sağlamak için */
+  z-index: 1;
 }
+
 
 /* Gölgelenmiş arka plan için */
 .contact-page-container.fullscreen-background {
@@ -183,4 +185,42 @@
   margin-top: 15px;
   font-size: 14px;
   color: gold;
+}
+
+/* Küçük ekranlarda flex yönünü değiştir */
+@media (max-width: 768px) {
+  .contact-page-content {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .car-info-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contact-form {
+    margin-top: 0px;
+    width: 100%;
+  }
+  .contact-form {
+    max-width: 90%; /* Küçük ekranlarda form genişliği küçülür */
+    padding: 15px;
+  }
+}
+
+
+/* Butonlar için duyarlılık */
+@media (max-width: 480px) {
+  .submit-btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .zoom-icon, .close-fullscreen {
+    font-size: 18px;
+    padding: 5px;
+  }
 }

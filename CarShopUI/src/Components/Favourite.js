@@ -11,7 +11,13 @@ function Favourite() {
   const visibleCars = 3;
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (!token) {
+      navigate("/login");
+    }
+  }, [token, navigate]);
 
+  
   const handleCikarClick = (carId) => {
     if (!token) return;
   
